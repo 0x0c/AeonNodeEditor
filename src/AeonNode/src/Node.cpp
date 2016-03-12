@@ -35,8 +35,8 @@ namespace AeonNode {
 		}
 	}
 	
-	Connector* Node::add_connector(Connector::Type type, std::string tag, std::vector<Connector *> *connecter) {
-		Connector *c = new Connector(this, type);
+	Connector* Node::add_connector(Connector::Type type, std::type_info *connectable_type, std::string tag, std::vector<Connector *> *connecter) {
+		Connector *c = new Connector(this, connectable_type, type);
 		c->tag = tag;
 		connecter->push_back(c);
 		return c;
@@ -91,9 +91,9 @@ namespace AeonNode {
 		ofAddListener(ofEvents().mouseDragged, this, &Node::onMouseDragged);
 	}
 	
-	void Node::add_connector(std::string tag, Connector::Type type) {
+	void Node::add_connector(std::string tag, std::type_info *connectable_type, Connector::Type type) {
 		std::vector<Connector *> *connector = type == Connector::Type::Output ? &this->output_connector : &this->input_connector;
-		this->add_connector(type, tag, connector);
+		this->add_connector(type, connectable_type, tag, connector);
 		this->size_to_fit();
 	}
 	

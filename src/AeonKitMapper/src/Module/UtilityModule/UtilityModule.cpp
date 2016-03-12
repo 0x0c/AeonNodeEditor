@@ -10,8 +10,8 @@
 
 namespace AeonKitMapper {	
 	CounterModule::CounterModule(float x, float y) : Module("Counter", x, y) , counter(0) {
-		this->add_connector("in", AeonNode::Connector::Type::Input);
-		this->add_connector("out", AeonNode::Connector::Type::Output);
+		this->add_connector("in", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
+		this->add_connector("out", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		this->counter_label = this->gui->addHeader(std::to_string(this->eval()), false);
 	}
 	

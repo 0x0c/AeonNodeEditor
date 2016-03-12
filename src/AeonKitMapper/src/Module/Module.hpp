@@ -28,7 +28,7 @@ namespace AeonKitMapper {
 		void update(ofEventArgs &args);
 		Module(std::string module_name, float x, float y);
 		~Module();
-		virtual void add_connector(std::string tag, AeonNode::Connector::Type type) override;
+		virtual void add_connector(std::string tag, std::type_info *connectable_type, AeonNode::Connector::Type type) override;
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) override = 0;
 		virtual T eval() = 0;
 		virtual void eval_and_send() = 0;

@@ -12,6 +12,7 @@
 #include <functional>
 #include <string>
 #include <tuple>
+#include <typeinfo>
 #include <boost/any.hpp>
 #include "ofTrueTypeFont.h"
 #include "ofGraphics.h"
@@ -33,6 +34,7 @@ namespace AeonNode {
 		void onConnecterPressed(ofMouseEventArgs& mouseArgs);
 		void onConnecterReleased(ofMouseEventArgs& mouseArgs);
 		void onConnecterDragged(ofMouseEventArgs& mouseArgs);
+		std::type_info *connectable_type;
 	public:
 		static const std::string MouseReleaseNotification;
 		std::string tag;
@@ -43,12 +45,14 @@ namespace AeonNode {
 		Connector::Type type;
 		std::vector<Connector *> connected_connector;
 		Node* get_parent_node();
+		std::type_info* get_connectable_type();
+		virtual bool is_connectable_type(std::type_info *type);
 		virtual void send_data(Node *from, boost::any data);
 		virtual void received_data(Node *from, boost::any data);
-		virtual void connect(Connector *connector);
+		virtual bool connect(Connector *connector);
 		virtual void disconnect(Connector *connector = nullptr);
 		virtual void draw();
-		Connector(Node *parent_node, Connector::Type type);
+		Connector(Node *parent_node, std::type_info *connectable_type, Connector::Type type);
 		~Connector();
 	};
 }

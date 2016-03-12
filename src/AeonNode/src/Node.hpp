@@ -28,14 +28,14 @@ namespace AeonNode {
 		std::vector<Connector *> output_connector;
 		
 		Connector* tag_for_connector(std::vector<Connector *> *connector, std::string tag);
-		Connector* add_connector(Connector::Type type, std::string tag, std::vector<Connector *> *connecter);
+		Connector* add_connector(Connector::Type type, std::type_info *connectable_type, std::string tag, std::vector<Connector *> *connecter);
 		Connector* tag_for_connector(std::string tag, Connector::Type type);
 		virtual void onMousePressed(ofMouseEventArgs& mouseArgs);
 		virtual void onMouseReleased(ofMouseEventArgs& mouseArgs);
 		virtual void onMouseDragged(ofMouseEventArgs& mouseArgs);
 	public:
 		Node(ofxHierarchy::Rect f);
-		virtual void add_connector(std::string tag, Connector::Type type);
+		virtual void add_connector(std::string tag, std::type_info *connectable_type, Connector::Type type);
 		virtual void send_data(boost::any data);
 		virtual void received_data(Node *from, Connector *connector, boost::any data) = 0;
 		virtual void size_to_fit();

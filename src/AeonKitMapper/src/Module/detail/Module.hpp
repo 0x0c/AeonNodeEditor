@@ -48,8 +48,8 @@ namespace AeonKitMapper {
 		delete this->gui;
 	}
 	
-	template <typename T> void Module<T>::add_connector(std::string tag, AeonNode::Connector::Type type) {
+	template <typename T> void Module<T>::add_connector(std::string tag, std::type_info *connectable_type, AeonNode::Connector::Type type) {
 		this->size_to_fit();
-		Node::add_connector(tag, type);
+		Node::add_connector(tag, connectable_type, type);
 	}
 }

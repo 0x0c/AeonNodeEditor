@@ -51,6 +51,14 @@ namespace AeonNode {
 		return this->parent_node;
 	}
 	
+	std::type_info* Connector::get_connectable_type() {
+		return this->connectable_type;
+	}
+	
+	bool Connector::is_connectable_type(std::type_info *type) {
+		return this->connectable_type->name() == type->name();
+	}
+	
 	void Connector::send_data(Node *from, boost::any data) {
 		for (int i = 0; i < this->connected_connector.size(); i++) {
 			auto c = this->connected_connector[i];
@@ -62,8 +70,8 @@ namespace AeonNode {
 		this->parent_node->received_data(from, this, data);
 	}
 	
-	void Connector::connect(Connector *connector) {
-		if (this->type != connector->type) {
+	bool Connector::connect(Connector *connector) {
+		if (this->type != connector->type && this->is_connectable_type(connector->get_connectable_type())) {
 			connector->parent_connector = this;
 			this->connected_connector.push_back(connector);
 		}
@@ -122,7 +130,7 @@ namespace AeonNode {
 		this->label_font.drawString(this->tag, this->frame.origin.x, this->center().y - 10);
 	}
 	
-	Connector::Connector(Node *parent_node, Connector::Type type) : parent_node(parent_node), type(type) {
+	Connector::Connector(Node *parent_node, std::type_info *connectable_type, Connector::Type type) : parent_node(parent_node), type(type), connectable_type(connectable_type) {
 		this->frame.size.width = 14;
 		this->frame.size.height = 14;
 		this->label_font.load("arial.ttf", 8);
