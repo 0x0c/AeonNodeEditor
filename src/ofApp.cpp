@@ -22,8 +22,10 @@ void ofApp::setup(){
 	
 	auto depth_sensor = new AeonKitMapper::DepthSensor(700, 100);
 	this->view.add_subview(depth_sensor);
-	auto oled_display = new AeonKitMapper::OLEDDisplay(700, 400);
+	auto oled_display = new AeonKitMapper::OLEDDisplay(700, 200);
 	this->view.add_subview(oled_display);
+	auto oled_display2 = new AeonKitMapper::OLEDDisplay(700, 400);
+	this->view.add_subview(oled_display2);
 
 	auto string_converter_module = new AeonKitMapper::StringConverterModule<int>(400, 100);
 	this->view.add_subview(string_converter_module);
@@ -44,7 +46,6 @@ void ofApp::setup(){
 	this->view.add_subview(false_module);
 	auto and_module = new AeonKitMapper::LogicANDModule(100, 500);
 	this->view.add_subview(and_module);
-	
 }
 
 //--------------------------------------------------------------
