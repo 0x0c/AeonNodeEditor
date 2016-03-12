@@ -14,8 +14,11 @@
 namespace AeonKitMapper {
 	template <typename T> class DisplayModule : public HardwareModule<T> {
 	public:
-		DisplayModule(float x, float y);
-		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
+		DisplayModule(float x, float y) : HardwareModule<T>("DisplayModule", x, y) {
+			this->add_connector("display_data", AeonNode::Connector::Type::Input);
+			this->size_to_fit();
+		}
+		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) = 0;
 	};
 	
 	class HapticDisplay : public DisplayModule<int> {

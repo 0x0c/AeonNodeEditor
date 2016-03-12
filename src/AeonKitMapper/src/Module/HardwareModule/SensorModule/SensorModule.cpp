@@ -9,28 +9,6 @@
 #include "SensorModule.hpp"
 
 namespace AeonKitMapper {
-	template <typename T> SensorModule<T>::SensorModule(float x, float y) : HardwareModule<T>("SensorModule", x, y) {
-		this->gui->addButton("Send Data");
-		this->add_connector("check", AeonNode::Connector::Type::Input);
-		this->add_connector("sensor_data", AeonNode::Connector::Type::Output);
-	}
-	
-	template <typename T> void SensorModule<T>::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
-		bool in = boost::any_cast<bool>(data);
-		if (in) {
-			this->eval_and_send();
-		}
-	}
-	
-	template <typename T> T SensorModule<T>::update_output_state() {
-		float result = this->eval();
-		return result;
-	}
-	
-	template <typename T> void SensorModule<T>::eval_and_send() {
-		this->send_data(this->eval());
-	}
-	
 	TiltSensor::TiltSensor(float x, float y) : SensorModule(x, y), tilt(false) {}
 	
 	bool TiltSensor::eval() {

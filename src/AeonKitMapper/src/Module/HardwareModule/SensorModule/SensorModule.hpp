@@ -14,10 +14,27 @@
 namespace AeonKitMapper {
 	template <typename T> class SensorModule : public HardwareModule<T> {
 	public:
-		SensorModule(float x, float y);
-		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
-		virtual void eval_and_send();
-		virtual T update_output_state();
+		SensorModule(float x, float y) : HardwareModule<T>("SensorModule", x, y) {
+			this->gui->addButton("Send Data");
+			this->add_connector("check", AeonNode::Connector::Type::Input);
+			this->add_connector("sensor_data", AeonNode::Connector::Type::Output);
+		}
+		
+		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
+			bool in = boost::any_cast<bool>(data);
+			if (in) {
+				this->eval_and_send();
+			}
+		}
+		
+		virtual void eval_and_send() {
+			float result = this->eval();
+			return result;
+		}
+		
+		virtual T update_output_state() {
+			this->send_data(this->eval());
+		}
 	};
 	
 	class TiltSensor : public SensorModule<bool> {
