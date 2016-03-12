@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08DB6C53A3565A6DEB025E65 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25B37904B5001247EDF633BA /* Node.cpp */; };
+		214222E9104F4F8834D94CB8 /* SensorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 075D39EA5F17F36A03F0B12F /* SensorModule.cpp */; };
+		40575BC42E6DB2A73DBCBD94 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E01F62249A3650A0C85734 /* DisplayModule.cpp */; };
+		512CABC2429BAEAA018305C3 /* StringConverterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 211CAB43D3E45EC0F935E4A5 /* StringConverterModule.cpp */; };
+		6DC9090E7B430623979A96F3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53E4CB1A117A5BB6452ED760 /* LogicModule.cpp */; };
+		6FAA22B805199FFFF5D08056 /* ujson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8611993FBB50A307F6FCC97E /* ujson.cpp */; };
+		80E510683E0CA819D6601B12 /* CounterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD1F9A2C7C12136C23E21C1 /* CounterModule.cpp */; };
+		855E56368094E59DF71D4471 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E0F10252716DACC38929F /* Connector.cpp */; };
+		885FC592853A7A6D0A53BD79 /* double-conversion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 212890F56D21E8CB8EF64A92 /* double-conversion.cc */; };
+		95A8A4726D64C739094E0FCB /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E464565E686082F260FB8 /* HardwareModule.cpp */; };
+		9CF4130A7E6DA19A3DC42B9A /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954E0E8B7DB9D6983309883 /* ofxSmartFont.cpp */; };
+		AD2BFDFC32FD89FBD4EC657A /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F51780B867D37078409E89 /* ConditionModule.cpp */; };
 		C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */; };
 		D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E3B8F332A1A3C7EDF4998 /* ofxDatGuiComponent.cpp */; };
+		DB7374183D60F14B5BEDC2C4 /* thunderclap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A07AFDA743CC96DA03E26F6F /* thunderclap.cpp */; };
+		DDAB943DCC3E9E9B009B4A13 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7D8BEAA531A329847B85672 /* Module.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
-		E966BD8D1C94704900973484 /* double-conversion.cc in Sources */ = {isa = PBXBuildFile; fileRef = E966BD4F1C94700800973484 /* double-conversion.cc */; };
-		E966BD8E1C94704900973484 /* ujson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD511C94700800973484 /* ujson.cpp */; };
-		E966BD8F1C94704900973484 /* CounterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD6F1C94700800973484 /* CounterModule.cpp */; };
-		E966BD901C94704900973484 /* StringConverterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD741C94700800973484 /* StringConverterModule.cpp */; };
-		E966BD911C94704900973484 /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD591C94700800973484 /* ConditionModule.cpp */; };
-		E966BD921C94704900973484 /* SensorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD661C94700800973484 /* SensorModule.cpp */; };
-		E966BD931C94704900973484 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD611C94700800973484 /* DisplayModule.cpp */; };
-		E966BD941C94704900973484 /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD631C94700800973484 /* HardwareModule.cpp */; };
-		E966BD951C94704900973484 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD691C94700800973484 /* LogicModule.cpp */; };
-		E966BD961C94704900973484 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD6B1C94700800973484 /* Module.cpp */; };
-		E966BD971C94704900973484 /* ModuleExporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD771C94700800973484 /* ModuleExporter.cpp */; };
-		E966BD981C94704900973484 /* thunderclap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD821C94700800973484 /* thunderclap.cpp */; };
-		E966BD991C94704900973484 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD881C94700800973484 /* Connector.cpp */; };
-		E966BD9A1C94704900973484 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E966BD8A1C94700800973484 /* Node.cpp */; };
 		F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */; };
+		F8AE409FAF15C4964D1A0EB8 /* ModuleExporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D60D2652E2D29F322390E2 /* ModuleExporter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,69 +61,72 @@
 
 /* Begin PBXFileReference section */
 		04C339FF9ADCF05DF2DA62A3 /* ofxDatGuiTextInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiTextInputField.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiTextInputField.h; sourceTree = SOURCE_ROOT; };
+		075D39EA5F17F36A03F0B12F /* SensorModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SensorModule.cpp; path = src/lib/AeonKitMapper/src/Module/Hardware/SensorModule/SensorModule.cpp; sourceTree = SOURCE_ROOT; };
+		079A7FF91BE27393A6A50EC6 /* StringConverterModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StringConverterModule.hpp; path = src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/detail/StringConverterModule.hpp; sourceTree = SOURCE_ROOT; };
+		07F51780B867D37078409E89 /* ConditionModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConditionModule.cpp; path = src/lib/AeonKitMapper/src/Module/Condition/ConditionModule.cpp; sourceTree = SOURCE_ROOT; };
 		0A42C807BEF3A18E8E105A3B /* ofxDatGuiTimeGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiTimeGraph.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiTimeGraph.h; sourceTree = SOURCE_ROOT; };
+		125144E9EDC659B1B11F477A /* StringConverterModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StringConverterModule.hpp; path = src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/StringConverterModule.hpp; sourceTree = SOURCE_ROOT; };
 		1A3E3B8F332A1A3C7EDF4998 /* ofxDatGuiComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGuiComponent.cpp; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiComponent.cpp; sourceTree = SOURCE_ROOT; };
+		1C4E0F10252716DACC38929F /* Connector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Connector.cpp; path = src/lib/AeonNode/src/Connector.cpp; sourceTree = SOURCE_ROOT; };
+		211CAB43D3E45EC0F935E4A5 /* StringConverterModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StringConverterModule.cpp; path = src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/StringConverterModule.cpp; sourceTree = SOURCE_ROOT; };
+		212890F56D21E8CB8EF64A92 /* double-conversion.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = "double-conversion.cc"; path = "src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion.cc"; sourceTree = SOURCE_ROOT; };
 		21E1E3071CB7B11914428B62 /* ofxDatGuiThemes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiThemes.h; path = ../../../addons/ofxDatGui/src/themes/ofxDatGuiThemes.h; sourceTree = SOURCE_ROOT; };
+		25B37904B5001247EDF633BA /* Node.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Node.cpp; path = src/lib/AeonNode/src/Node.cpp; sourceTree = SOURCE_ROOT; };
 		26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGui.cpp; path = ../../../addons/ofxDatGui/src/ofxDatGui.cpp; sourceTree = SOURCE_ROOT; };
+		38BF33C6C685D902486A9104 /* ujson.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ujson.hpp; path = src/lib/AeonKitMapper/lib/ujson/ujson/ujson.hpp; sourceTree = SOURCE_ROOT; };
 		422C4E1AAC7EC4D30B17702D /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiIntObject.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
+		45A4C05324ACB2AE7FE9904A /* Connector.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Connector.hpp; path = src/lib/AeonNode/src/Connector.hpp; sourceTree = SOURCE_ROOT; };
+		49B40392829587FFC75BA016 /* ModuleExporter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ModuleExporter.hpp; path = src/lib/AeonKitMapper/src/ModuleExporter/ModuleExporter.hpp; sourceTree = SOURCE_ROOT; };
+		529FBC5E39B881C608B2E073 /* ConditionModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConditionModule.hpp; path = src/lib/AeonKitMapper/src/Module/Condition/detail/ConditionModule.hpp; sourceTree = SOURCE_ROOT; };
+		53E4CB1A117A5BB6452ED760 /* LogicModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LogicModule.cpp; path = src/lib/AeonKitMapper/src/Module/Logic/LogicModule.cpp; sourceTree = SOURCE_ROOT; };
+		545BBA6F6669BED2DA497BC6 /* ofxDatGuiScrollView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiScrollView.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiScrollView.h; sourceTree = SOURCE_ROOT; };
+		55E1586A6DCB7E93820F0BC1 /* ConditionModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConditionModule.hpp; path = src/lib/AeonKitMapper/src/Module/Condition/ConditionModule.hpp; sourceTree = SOURCE_ROOT; };
 		64C563B8158C37E9D07AE29D /* ofxDatGuiFRM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiFRM.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiFRM.h; sourceTree = SOURCE_ROOT; };
+		66419C72C9E4F738804E17A4 /* Module.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Module.hpp; path = src/lib/AeonKitMapper/src/Module/Module.hpp; sourceTree = SOURCE_ROOT; };
+		69E01F62249A3650A0C85734 /* DisplayModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DisplayModule.cpp; path = src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule/DisplayModule.cpp; sourceTree = SOURCE_ROOT; };
 		744031A3E8F8DAF9FE6F3EA8 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiGroups.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
 		787315438BF1DD00C81DF413 /* ofxDatGuiLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiLabel.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiLabel.h; sourceTree = SOURCE_ROOT; };
+		81B15ECE2AFE7709C43B78F7 /* LogicModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LogicModule.hpp; path = src/lib/AeonKitMapper/src/Module/Logic/LogicModule.hpp; sourceTree = SOURCE_ROOT; };
+		8611993FBB50A307F6FCC97E /* ujson.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ujson.cpp; path = src/lib/AeonKitMapper/lib/ujson/ujson/ujson.cpp; sourceTree = SOURCE_ROOT; };
+		896211FFD7650884437CE42C /* ofxSmartFont.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSmartFont.h; path = ../../../addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h; sourceTree = SOURCE_ROOT; };
+		8C7E464565E686082F260FB8 /* HardwareModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HardwareModule.cpp; path = src/lib/AeonKitMapper/src/Module/Hardware/HardwareModule.cpp; sourceTree = SOURCE_ROOT; };
+		8EA7BC601AB3E11B67FC302B /* Node.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Node.hpp; path = src/lib/AeonNode/src/Node.hpp; sourceTree = SOURCE_ROOT; };
 		902724601B82C6AD81BBCD71 /* ofxDatGui2dPad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGui2dPad.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGui2dPad.h; sourceTree = SOURCE_ROOT; };
 		912D52402F936D79D5B87129 /* ofxHierarchy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxHierarchy.h; path = ../../../addons/ofxHierarchy/src/ofxHierarchy.h; sourceTree = SOURCE_ROOT; };
 		9705D66270ED89ECA6E6FECE /* ofxDatGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGui.h; path = ../../../addons/ofxDatGui/src/ofxDatGui.h; sourceTree = SOURCE_ROOT; };
 		9B5051062C6A871714E6F5F4 /* ofxDatGuiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiConstants.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiConstants.h; sourceTree = SOURCE_ROOT; };
+		9C3C1C6B6C61C7189AA1A909 /* CounterModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CounterModule.hpp; path = src/lib/AeonKitMapper/src/Module/Utility/CounterModule/CounterModule.hpp; sourceTree = SOURCE_ROOT; };
+		9FE55241CD8D7CE0F5F65A0E /* double-conversion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "double-conversion.h"; path = "src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion.h"; sourceTree = SOURCE_ROOT; };
+		A07AFDA743CC96DA03E26F6F /* thunderclap.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = thunderclap.cpp; path = src/lib/AeonNode/lib/thunderclap/thunderclap.cpp; sourceTree = SOURCE_ROOT; };
 		B498F0559F473CF855EF6062 /* ofxDatGuiTheme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiTheme.h; path = ../../../addons/ofxDatGui/src/themes/ofxDatGuiTheme.h; sourceTree = SOURCE_ROOT; };
+		B7D8BEAA531A329847B85672 /* Module.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Module.cpp; path = src/lib/AeonKitMapper/src/Module/Module.cpp; sourceTree = SOURCE_ROOT; };
+		BB5CF7DF2141B800CEB39B03 /* thunderclap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = thunderclap.h; path = src/lib/AeonNode/lib/thunderclap/thunderclap.h; sourceTree = SOURCE_ROOT; };
 		BCC84C6EB3417706F4F762F0 /* ofxDatGuiComponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiComponent.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiComponent.h; sourceTree = SOURCE_ROOT; };
 		C085A33340AB0C1DB647AC2F /* ofxDatGuiTextInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiTextInput.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiTextInput.h; sourceTree = SOURCE_ROOT; };
+		C70165DF7E17144C0D1443F6 /* Module.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Module.hpp; path = src/lib/AeonKitMapper/src/Module/detail/Module.hpp; sourceTree = SOURCE_ROOT; };
 		C84ED7FCC017328C6F58283D /* ofxDatGuiColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiColorPicker.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiColorPicker.h; sourceTree = SOURCE_ROOT; };
+		C91373327B250A6246394AF4 /* thunderclap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = thunderclap.h; path = src/lib/AeonNode/lib/thunderclap/detail/thunderclap.h; sourceTree = SOURCE_ROOT; };
+		C954E0E8B7DB9D6983309883 /* ofxSmartFont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSmartFont.cpp; path = ../../../addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.cpp; sourceTree = SOURCE_ROOT; };
+		CCD1F9A2C7C12136C23E21C1 /* CounterModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CounterModule.cpp; path = src/lib/AeonKitMapper/src/Module/Utility/CounterModule/CounterModule.cpp; sourceTree = SOURCE_ROOT; };
 		CDF7278CB636137FE7BF91A5 /* ofxDatGuiMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiMatrix.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiMatrix.h; sourceTree = SOURCE_ROOT; };
 		D0D6A66BEBA820EA1D396889 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiSlider.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
+		D4621EA7B4F163D9E7F4033A /* HardwareModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = HardwareModule.hpp; path = src/lib/AeonKitMapper/src/Module/Hardware/HardwareModule.hpp; sourceTree = SOURCE_ROOT; };
+		D8D60D2652E2D29F322390E2 /* ModuleExporter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ModuleExporter.cpp; path = src/lib/AeonKitMapper/src/ModuleExporter/ModuleExporter.cpp; sourceTree = SOURCE_ROOT; };
 		DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxHierarchy.cpp; path = ../../../addons/ofxHierarchy/src/ofxHierarchy.cpp; sourceTree = SOURCE_ROOT; };
 		E100ED9DCB412957A879CD5A /* ofxDatGuiControls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiControls.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiControls.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* AeonNodeEditorDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeonNodeEditorDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E966BD4F1C94700800973484 /* double-conversion.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "double-conversion.cc"; path = "ujson/double-conversion.cc"; sourceTree = "<group>"; };
-		E966BD501C94700800973484 /* double-conversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "double-conversion.h"; path = "ujson/double-conversion.h"; sourceTree = "<group>"; };
-		E966BD511C94700800973484 /* ujson.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ujson.cpp; path = ujson/ujson.cpp; sourceTree = "<group>"; };
-		E966BD521C94700800973484 /* ujson.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ujson.hpp; path = ujson/ujson.hpp; sourceTree = "<group>"; };
-		E966BD531C94700800973484 /* ujson.re2c */ = {isa = PBXFileReference; lastKnownFileType = text; name = ujson.re2c; path = ujson/ujson.re2c; sourceTree = "<group>"; };
-		E966BD561C94700800973484 /* AeonKitMapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AeonKitMapper.hpp; sourceTree = "<group>"; };
-		E966BD591C94700800973484 /* ConditionModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConditionModule.cpp; sourceTree = "<group>"; };
-		E966BD5A1C94700800973484 /* ConditionModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConditionModule.hpp; sourceTree = "<group>"; };
-		E966BD5C1C94700800973484 /* ConditionModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConditionModule.hpp; sourceTree = "<group>"; };
-		E966BD5E1C94700800973484 /* Module.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Module.hpp; sourceTree = "<group>"; };
-		E966BD611C94700800973484 /* DisplayModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisplayModule.cpp; sourceTree = "<group>"; };
-		E966BD621C94700800973484 /* DisplayModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisplayModule.hpp; sourceTree = "<group>"; };
-		E966BD631C94700800973484 /* HardwareModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HardwareModule.cpp; sourceTree = "<group>"; };
-		E966BD641C94700800973484 /* HardwareModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HardwareModule.hpp; sourceTree = "<group>"; };
-		E966BD661C94700800973484 /* SensorModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SensorModule.cpp; sourceTree = "<group>"; };
-		E966BD671C94700800973484 /* SensorModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SensorModule.hpp; sourceTree = "<group>"; };
-		E966BD691C94700800973484 /* LogicModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogicModule.cpp; sourceTree = "<group>"; };
-		E966BD6A1C94700800973484 /* LogicModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogicModule.hpp; sourceTree = "<group>"; };
-		E966BD6B1C94700800973484 /* Module.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Module.cpp; sourceTree = "<group>"; };
-		E966BD6C1C94700800973484 /* Module.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Module.hpp; sourceTree = "<group>"; };
-		E966BD6F1C94700800973484 /* CounterModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CounterModule.cpp; sourceTree = "<group>"; };
-		E966BD701C94700800973484 /* CounterModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CounterModule.hpp; sourceTree = "<group>"; };
-		E966BD731C94700800973484 /* StringConverterModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringConverterModule.hpp; sourceTree = "<group>"; };
-		E966BD741C94700800973484 /* StringConverterModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringConverterModule.cpp; sourceTree = "<group>"; };
-		E966BD751C94700800973484 /* StringConverterModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringConverterModule.hpp; sourceTree = "<group>"; };
-		E966BD771C94700800973484 /* ModuleExporter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ModuleExporter.cpp; sourceTree = "<group>"; };
-		E966BD781C94700800973484 /* ModuleExporter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ModuleExporter.hpp; sourceTree = "<group>"; };
-		E966BD7E1C94700800973484 /* thunderclap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thunderclap.h; sourceTree = "<group>"; };
-		E966BD821C94700800973484 /* thunderclap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thunderclap.cpp; sourceTree = "<group>"; };
-		E966BD831C94700800973484 /* thunderclap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thunderclap.h; sourceTree = "<group>"; };
-		E966BD881C94700800973484 /* Connector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Connector.cpp; sourceTree = "<group>"; };
-		E966BD891C94700800973484 /* Connector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Connector.hpp; sourceTree = "<group>"; };
-		E966BD8A1C94700800973484 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
-		E966BD8B1C94700800973484 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		E9AB5A3E1C948D1100B4B8EA /* ujson.re2c */ = {isa = PBXFileReference; lastKnownFileType = text; name = ujson.re2c; path = lib/AeonKitMapper/lib/ujson/ujson/ujson.re2c; sourceTree = "<group>"; };
+		ED6DC4D524FBCD5B356FD28E /* SensorModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SensorModule.hpp; path = src/lib/AeonKitMapper/src/Module/Hardware/SensorModule/SensorModule.hpp; sourceTree = SOURCE_ROOT; };
+		F2FC15FF181F45C1E43F3100 /* DisplayModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DisplayModule.hpp; path = src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule/DisplayModule.hpp; sourceTree = SOURCE_ROOT; };
 		F59384ED57A7C6A7A8B0351D /* ofxDatGuiEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiEvents.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiEvents.h; sourceTree = SOURCE_ROOT; };
+		F67065828C04E93F7E52FBE3 /* AeonKitMapper.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AeonKitMapper.hpp; path = src/lib/AeonKitMapper/src/AeonKitMapper.hpp; sourceTree = SOURCE_ROOT; };
 		FDA86F4C2F1F1964D35391C6 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiButton.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,122 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086AEC516EA9E79A639D71E6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				8C98F38ED1714F86E844F6C7 /* ujson */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		0C0D632E522C1189318A972A /* Hardware */ = {
+			isa = PBXGroup;
+			children = (
+				68B46786950008BC11C358D6 /* DisplayModule */,
+				8C7E464565E686082F260FB8 /* HardwareModule.cpp */,
+				D4621EA7B4F163D9E7F4033A /* HardwareModule.hpp */,
+				BEEAAB4048F60DE071D6E1C1 /* SensorModule */,
+			);
+			name = Hardware;
+			sourceTree = "<group>";
+		};
+		0EF29D3ABD6E4147AE024D7A /* ofxSmartFont */ = {
+			isa = PBXGroup;
+			children = (
+				C954E0E8B7DB9D6983309883 /* ofxSmartFont.cpp */,
+				896211FFD7650884437CE42C /* ofxSmartFont.h */,
+			);
+			name = ofxSmartFont;
+			sourceTree = "<group>";
+		};
+		18A1010FB16C856654DA54B7 /* thunderclap */ = {
+			isa = PBXGroup;
+			children = (
+				477F537A100F08C387F21F2E /* detail */,
+				A07AFDA743CC96DA03E26F6F /* thunderclap.cpp */,
+				BB5CF7DF2141B800CEB39B03 /* thunderclap.h */,
+			);
+			name = thunderclap;
+			sourceTree = "<group>";
+		};
+		26863FA70EB657088B7EEFBD /* StringConverterModule */ = {
+			isa = PBXGroup;
+			children = (
+				E1A4F9B867CE8DF669D23EF1 /* detail */,
+				211CAB43D3E45EC0F935E4A5 /* StringConverterModule.cpp */,
+				125144E9EDC659B1B11F477A /* StringConverterModule.hpp */,
+			);
+			name = StringConverterModule;
+			sourceTree = "<group>";
+		};
+		29D38AEBCD5EB6CB70952E0E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				FDD498D9276DFBE3DB7C6E37 /* Condition */,
+				7C6F90530F65324BDE40FE0D /* detail */,
+				0C0D632E522C1189318A972A /* Hardware */,
+				420CF6183EDE5F3631887241 /* Logic */,
+				B7D8BEAA531A329847B85672 /* Module.cpp */,
+				66419C72C9E4F738804E17A4 /* Module.hpp */,
+				B3B75549B5E0901365B9F278 /* Utility */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		34D34744CA985C09666740A6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1C4E0F10252716DACC38929F /* Connector.cpp */,
+				45A4C05324ACB2AE7FE9904A /* Connector.hpp */,
+				25B37904B5001247EDF633BA /* Node.cpp */,
+				8EA7BC601AB3E11B67FC302B /* Node.hpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		420CF6183EDE5F3631887241 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				53E4CB1A117A5BB6452ED760 /* LogicModule.cpp */,
+				81B15ECE2AFE7709C43B78F7 /* LogicModule.hpp */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		477F537A100F08C387F21F2E /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				C91373327B250A6246394AF4 /* thunderclap.h */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
+		5C19F65F15FF688E86155961 /* AeonNode */ = {
+			isa = PBXGroup;
+			children = (
+				A4E153870C94A4D90E4F399F /* lib */,
+				34D34744CA985C09666740A6 /* src */,
+			);
+			name = AeonNode;
+			sourceTree = "<group>";
+		};
+		68B46786950008BC11C358D6 /* DisplayModule */ = {
+			isa = PBXGroup;
+			children = (
+				69E01F62249A3650A0C85734 /* DisplayModule.cpp */,
+				F2FC15FF181F45C1E43F3100 /* DisplayModule.hpp */,
+			);
+			name = DisplayModule;
+			sourceTree = "<group>";
+		};
+		69146F0BA46E48E576618E5E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				0EF29D3ABD6E4147AE024D7A /* ofxSmartFont */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
 		6948EE371B920CB800B5AC1A /* local_addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +273,23 @@
 			name = ofxHierarchy;
 			sourceTree = "<group>";
 		};
+		7C6F90530F65324BDE40FE0D /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				C70165DF7E17144C0D1443F6 /* Module.hpp */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
+		8393D57D0DC6B215DF168629 /* ModuleExporter */ = {
+			isa = PBXGroup;
+			children = (
+				D8D60D2652E2D29F322390E2 /* ModuleExporter.cpp */,
+				49B40392829587FFC75BA016 /* ModuleExporter.hpp */,
+			);
+			name = ModuleExporter;
+			sourceTree = "<group>";
+		};
 		8870759BC9CAEA1E4E9EA3A8 /* core */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +302,27 @@
 			name = core;
 			sourceTree = "<group>";
 		};
+		8975E2D222EF564B42E5C807 /* AeonKitMapper */ = {
+			isa = PBXGroup;
+			children = (
+				086AEC516EA9E79A639D71E6 /* lib */,
+				92479A0B7EEAA3083F2BA6B4 /* src */,
+			);
+			name = AeonKitMapper;
+			sourceTree = "<group>";
+		};
+		8C98F38ED1714F86E844F6C7 /* ujson */ = {
+			isa = PBXGroup;
+			children = (
+				212890F56D21E8CB8EF64A92 /* double-conversion.cc */,
+				9FE55241CD8D7CE0F5F65A0E /* double-conversion.h */,
+				8611993FBB50A307F6FCC97E /* ujson.cpp */,
+				38BF33C6C685D902486A9104 /* ujson.hpp */,
+				E9AB5A3E1C948D1100B4B8EA /* ujson.re2c */,
+			);
+			name = ujson;
+			sourceTree = "<group>";
+		};
 		911FE1C75E520EE70A7B4830 /* themes */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +330,16 @@
 				21E1E3071CB7B11914428B62 /* ofxDatGuiThemes.h */,
 			);
 			name = themes;
+			sourceTree = "<group>";
+		};
+		92479A0B7EEAA3083F2BA6B4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F67065828C04E93F7E52FBE3 /* AeonKitMapper.hpp */,
+				29D38AEBCD5EB6CB70952E0E /* Module */,
+				8393D57D0DC6B215DF168629 /* ModuleExporter */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		947FCD1248D8B0A16B53C1AA /* components */ = {
@@ -185,12 +353,48 @@
 				744031A3E8F8DAF9FE6F3EA8 /* ofxDatGuiGroups.h */,
 				787315438BF1DD00C81DF413 /* ofxDatGuiLabel.h */,
 				CDF7278CB636137FE7BF91A5 /* ofxDatGuiMatrix.h */,
+				545BBA6F6669BED2DA497BC6 /* ofxDatGuiScrollView.h */,
 				D0D6A66BEBA820EA1D396889 /* ofxDatGuiSlider.h */,
 				C085A33340AB0C1DB647AC2F /* ofxDatGuiTextInput.h */,
 				04C339FF9ADCF05DF2DA62A3 /* ofxDatGuiTextInputField.h */,
 				0A42C807BEF3A18E8E105A3B /* ofxDatGuiTimeGraph.h */,
 			);
 			name = components;
+			sourceTree = "<group>";
+		};
+		948442A4E189C9D81D26B6A8 /* CounterModule */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1F9A2C7C12136C23E21C1 /* CounterModule.cpp */,
+				9C3C1C6B6C61C7189AA1A909 /* CounterModule.hpp */,
+			);
+			name = CounterModule;
+			sourceTree = "<group>";
+		};
+		965168FECD51AAD1D9169011 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				8975E2D222EF564B42E5C807 /* AeonKitMapper */,
+				5C19F65F15FF688E86155961 /* AeonNode */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		A4E153870C94A4D90E4F399F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				18A1010FB16C856654DA54B7 /* thunderclap */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		B3B75549B5E0901365B9F278 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				948442A4E189C9D81D26B6A8 /* CounterModule */,
+				26863FA70EB657088B7EEFBD /* StringConverterModule */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -202,12 +406,37 @@
 			name = addons;
 			sourceTree = "<group>";
 		};
+		BEEAAB4048F60DE071D6E1C1 /* SensorModule */ = {
+			isa = PBXGroup;
+			children = (
+				075D39EA5F17F36A03F0B12F /* SensorModule.cpp */,
+				ED6DC4D524FBCD5B356FD28E /* SensorModule.hpp */,
+			);
+			name = SensorModule;
+			sourceTree = "<group>";
+		};
+		C5CEE39D771EEB0130925C2D /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				529FBC5E39B881C608B2E073 /* ConditionModule.hpp */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		D8DD1043C333F6F63C8685E6 /* ofxDatGui */ = {
 			isa = PBXGroup;
 			children = (
 				E9B32C117486580389FAFF01 /* src */,
 			);
 			name = ofxDatGui;
+			sourceTree = "<group>";
+		};
+		E1A4F9B867CE8DF669D23EF1 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				079A7FF91BE27393A6A50EC6 /* StringConverterModule.hpp */,
+			);
+			name = detail;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -234,10 +463,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E966BD2C1C94700800973484 /* lib */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				965168FECD51AAD1D9169011 /* lib */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -251,233 +480,27 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
-		E966BD2C1C94700800973484 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD2D1C94700800973484 /* AeonKitMapper */,
-				E966BD791C94700800973484 /* AeonNode */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		E966BD2D1C94700800973484 /* AeonKitMapper */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD2E1C94700800973484 /* lib */,
-				E966BD551C94700800973484 /* src */,
-			);
-			path = AeonKitMapper;
-			sourceTree = "<group>";
-		};
-		E966BD2E1C94700800973484 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD2F1C94700800973484 /* ujson */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		E966BD2F1C94700800973484 /* ujson */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD4F1C94700800973484 /* double-conversion.cc */,
-				E966BD501C94700800973484 /* double-conversion.h */,
-				E966BD511C94700800973484 /* ujson.cpp */,
-				E966BD521C94700800973484 /* ujson.hpp */,
-				E966BD531C94700800973484 /* ujson.re2c */,
-			);
-			path = ujson;
-			sourceTree = "<group>";
-		};
-		E966BD551C94700800973484 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD561C94700800973484 /* AeonKitMapper.hpp */,
-				E966BD571C94700800973484 /* Module */,
-				E966BD761C94700800973484 /* ModuleExporter */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		E966BD571C94700800973484 /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD6D1C94700800973484 /* Utility */,
-				E966BD581C94700800973484 /* Condition */,
-				E966BD5D1C94700800973484 /* detail */,
-				E966BD5F1C94700800973484 /* Hardware */,
-				E966BD681C94700800973484 /* Logic */,
-				E966BD6B1C94700800973484 /* Module.cpp */,
-				E966BD6C1C94700800973484 /* Module.hpp */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
-		E966BD581C94700800973484 /* Condition */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD591C94700800973484 /* ConditionModule.cpp */,
-				E966BD5A1C94700800973484 /* ConditionModule.hpp */,
-				E966BD5B1C94700800973484 /* detail */,
-			);
-			path = Condition;
-			sourceTree = "<group>";
-		};
-		E966BD5B1C94700800973484 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD5C1C94700800973484 /* ConditionModule.hpp */,
-			);
-			path = detail;
-			sourceTree = "<group>";
-		};
-		E966BD5D1C94700800973484 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD5E1C94700800973484 /* Module.hpp */,
-			);
-			path = detail;
-			sourceTree = "<group>";
-		};
-		E966BD5F1C94700800973484 /* Hardware */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD651C94700800973484 /* SensorModule */,
-				E966BD601C94700800973484 /* DisplayModule */,
-				E966BD631C94700800973484 /* HardwareModule.cpp */,
-				E966BD641C94700800973484 /* HardwareModule.hpp */,
-			);
-			path = Hardware;
-			sourceTree = "<group>";
-		};
-		E966BD601C94700800973484 /* DisplayModule */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD611C94700800973484 /* DisplayModule.cpp */,
-				E966BD621C94700800973484 /* DisplayModule.hpp */,
-			);
-			path = DisplayModule;
-			sourceTree = "<group>";
-		};
-		E966BD651C94700800973484 /* SensorModule */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD661C94700800973484 /* SensorModule.cpp */,
-				E966BD671C94700800973484 /* SensorModule.hpp */,
-			);
-			path = SensorModule;
-			sourceTree = "<group>";
-		};
-		E966BD681C94700800973484 /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD691C94700800973484 /* LogicModule.cpp */,
-				E966BD6A1C94700800973484 /* LogicModule.hpp */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		E966BD6D1C94700800973484 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD6E1C94700800973484 /* CounterModule */,
-				E966BD711C94700800973484 /* StringConverterModule */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		E966BD6E1C94700800973484 /* CounterModule */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD6F1C94700800973484 /* CounterModule.cpp */,
-				E966BD701C94700800973484 /* CounterModule.hpp */,
-			);
-			path = CounterModule;
-			sourceTree = "<group>";
-		};
-		E966BD711C94700800973484 /* StringConverterModule */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD721C94700800973484 /* detail */,
-				E966BD741C94700800973484 /* StringConverterModule.cpp */,
-				E966BD751C94700800973484 /* StringConverterModule.hpp */,
-			);
-			path = StringConverterModule;
-			sourceTree = "<group>";
-		};
-		E966BD721C94700800973484 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD731C94700800973484 /* StringConverterModule.hpp */,
-			);
-			path = detail;
-			sourceTree = "<group>";
-		};
-		E966BD761C94700800973484 /* ModuleExporter */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD771C94700800973484 /* ModuleExporter.cpp */,
-				E966BD781C94700800973484 /* ModuleExporter.hpp */,
-			);
-			path = ModuleExporter;
-			sourceTree = "<group>";
-		};
-		E966BD791C94700800973484 /* AeonNode */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD7A1C94700800973484 /* lib */,
-				E966BD871C94700800973484 /* src */,
-			);
-			path = AeonNode;
-			sourceTree = "<group>";
-		};
-		E966BD7A1C94700800973484 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD7B1C94700800973484 /* thunderclap */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		E966BD7B1C94700800973484 /* thunderclap */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD7D1C94700800973484 /* detail */,
-				E966BD821C94700800973484 /* thunderclap.cpp */,
-				E966BD831C94700800973484 /* thunderclap.h */,
-			);
-			path = thunderclap;
-			sourceTree = "<group>";
-		};
-		E966BD7D1C94700800973484 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD7E1C94700800973484 /* thunderclap.h */,
-			);
-			path = detail;
-			sourceTree = "<group>";
-		};
-		E966BD871C94700800973484 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				E966BD881C94700800973484 /* Connector.cpp */,
-				E966BD891C94700800973484 /* Connector.hpp */,
-				E966BD8A1C94700800973484 /* Node.cpp */,
-				E966BD8B1C94700800973484 /* Node.hpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		E9B32C117486580389FAFF01 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				947FCD1248D8B0A16B53C1AA /* components */,
 				8870759BC9CAEA1E4E9EA3A8 /* core */,
+				69146F0BA46E48E576618E5E /* libs */,
 				26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */,
 				9705D66270ED89ECA6E6FECE /* ofxDatGui.h */,
 				911FE1C75E520EE70A7B4830 /* themes */,
 			);
 			name = src;
+			sourceTree = "<group>";
+		};
+		FDD498D9276DFBE3DB7C6E37 /* Condition */ = {
+			isa = PBXGroup;
+			children = (
+				07F51780B867D37078409E89 /* ConditionModule.cpp */,
+				55E1586A6DCB7E93820F0BC1 /* ConditionModule.hpp */,
+				C5CEE39D771EEB0130925C2D /* detail */,
+			);
+			name = Condition;
 			sourceTree = "<group>";
 		};
 		FFF3D8DD1B67C349C3AE85E5 /* src */ = {
@@ -576,23 +599,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E966BD8D1C94704900973484 /* double-conversion.cc in Sources */,
-				E966BD8E1C94704900973484 /* ujson.cpp in Sources */,
-				E966BD8F1C94704900973484 /* CounterModule.cpp in Sources */,
-				E966BD901C94704900973484 /* StringConverterModule.cpp in Sources */,
-				E966BD911C94704900973484 /* ConditionModule.cpp in Sources */,
-				E966BD921C94704900973484 /* SensorModule.cpp in Sources */,
-				E966BD931C94704900973484 /* DisplayModule.cpp in Sources */,
-				E966BD941C94704900973484 /* HardwareModule.cpp in Sources */,
-				E966BD951C94704900973484 /* LogicModule.cpp in Sources */,
-				E966BD961C94704900973484 /* Module.cpp in Sources */,
-				E966BD971C94704900973484 /* ModuleExporter.cpp in Sources */,
-				E966BD981C94704900973484 /* thunderclap.cpp in Sources */,
-				E966BD991C94704900973484 /* Connector.cpp in Sources */,
-				E966BD9A1C94704900973484 /* Node.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				885FC592853A7A6D0A53BD79 /* double-conversion.cc in Sources */,
+				6FAA22B805199FFFF5D08056 /* ujson.cpp in Sources */,
+				AD2BFDFC32FD89FBD4EC657A /* ConditionModule.cpp in Sources */,
+				40575BC42E6DB2A73DBCBD94 /* DisplayModule.cpp in Sources */,
+				95A8A4726D64C739094E0FCB /* HardwareModule.cpp in Sources */,
+				214222E9104F4F8834D94CB8 /* SensorModule.cpp in Sources */,
+				6DC9090E7B430623979A96F3 /* LogicModule.cpp in Sources */,
+				DDAB943DCC3E9E9B009B4A13 /* Module.cpp in Sources */,
+				80E510683E0CA819D6601B12 /* CounterModule.cpp in Sources */,
+				512CABC2429BAEAA018305C3 /* StringConverterModule.cpp in Sources */,
+				F8AE409FAF15C4964D1A0EB8 /* ModuleExporter.cpp in Sources */,
+				DB7374183D60F14B5BEDC2C4 /* thunderclap.cpp in Sources */,
+				855E56368094E59DF71D4471 /* Connector.cpp in Sources */,
+				08DB6C53A3565A6DEB025E65 /* Node.cpp in Sources */,
 				D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */,
+				9CF4130A7E6DA19A3DC42B9A /* ofxSmartFont.cpp in Sources */,
 				C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */,
 				F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */,
 			);
@@ -631,12 +655,41 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					src/AeonNodeEditor,
+					src/lib/AeonKitMapper/lib/ujson,
+					src/lib/AeonKitMapper/lib/ujson/examples,
+					src/lib/AeonKitMapper/lib/ujson/test,
+					src/lib/AeonKitMapper/lib/ujson/test/testcases,
+					src/lib/AeonKitMapper/lib/ujson/ujson,
+					"src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion",
+					src/lib/AeonKitMapper/src,
+					src/lib/AeonKitMapper/src/Module,
+					src/lib/AeonKitMapper/src/Module/Condition,
+					src/lib/AeonKitMapper/src/Module/Condition/detail,
+					src/lib/AeonKitMapper/src/Module/Hardware,
+					src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule,
+					src/lib/AeonKitMapper/src/Module/Hardware/SensorModule,
+					src/lib/AeonKitMapper/src/Module/Logic,
+					src/lib/AeonKitMapper/src/Module/Utility/CounterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/detail,
+					src/lib/AeonKitMapper/src/Module/detail,
+					src/lib/AeonKitMapper/src/ModuleExporter,
+					src/lib/AeonNode/lib/thunderclap,
+					src/lib/AeonNode/lib/thunderclap/detail,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcshareddata,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcuserdata/Akira.xcuserdatad,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/xcuserdata/Akira.xcuserdatad/xcschemes,
+					src/lib/AeonNode/src,
 					../../../addons/ofxDatGui/src,
 					../../../addons/ofxDatGui/src/components,
 					../../../addons/ofxDatGui/src/core,
+					../../../addons/ofxDatGui/src/libs,
+					../../../addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../../addons/ofxDatGui/src/themes,
 					../../../addons/ofxHierarchy/src,
+					../../../addons/ofxSmartFont/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -671,12 +724,41 @@
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					src/AeonNodeEditor,
+					src/lib/AeonKitMapper/lib/ujson,
+					src/lib/AeonKitMapper/lib/ujson/examples,
+					src/lib/AeonKitMapper/lib/ujson/test,
+					src/lib/AeonKitMapper/lib/ujson/test/testcases,
+					src/lib/AeonKitMapper/lib/ujson/ujson,
+					"src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion",
+					src/lib/AeonKitMapper/src,
+					src/lib/AeonKitMapper/src/Module,
+					src/lib/AeonKitMapper/src/Module/Condition,
+					src/lib/AeonKitMapper/src/Module/Condition/detail,
+					src/lib/AeonKitMapper/src/Module/Hardware,
+					src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule,
+					src/lib/AeonKitMapper/src/Module/Hardware/SensorModule,
+					src/lib/AeonKitMapper/src/Module/Logic,
+					src/lib/AeonKitMapper/src/Module/Utility/CounterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/detail,
+					src/lib/AeonKitMapper/src/Module/detail,
+					src/lib/AeonKitMapper/src/ModuleExporter,
+					src/lib/AeonNode/lib/thunderclap,
+					src/lib/AeonNode/lib/thunderclap/detail,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcshareddata,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcuserdata/Akira.xcuserdatad,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/xcuserdata/Akira.xcuserdatad/xcschemes,
+					src/lib/AeonNode/src,
 					../../../addons/ofxDatGui/src,
 					../../../addons/ofxDatGui/src/components,
 					../../../addons/ofxDatGui/src/core,
+					../../../addons/ofxDatGui/src/libs,
+					../../../addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../../addons/ofxDatGui/src/themes,
 					../../../addons/ofxHierarchy/src,
+					../../../addons/ofxSmartFont/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -703,19 +785,48 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"src/**",
+					src,
+					src/lib/AeonKitMapper/lib/ujson,
+					src/lib/AeonKitMapper/lib/ujson/examples,
+					src/lib/AeonKitMapper/lib/ujson/test,
+					src/lib/AeonKitMapper/lib/ujson/test/testcases,
+					src/lib/AeonKitMapper/lib/ujson/ujson,
+					"src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion",
+					src/lib/AeonKitMapper/src,
+					src/lib/AeonKitMapper/src/Module,
+					src/lib/AeonKitMapper/src/Module/Condition,
+					src/lib/AeonKitMapper/src/Module/Condition/detail,
+					src/lib/AeonKitMapper/src/Module/Hardware,
+					src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule,
+					src/lib/AeonKitMapper/src/Module/Hardware/SensorModule,
+					src/lib/AeonKitMapper/src/Module/Logic,
+					src/lib/AeonKitMapper/src/Module/Utility/CounterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/detail,
+					src/lib/AeonKitMapper/src/Module/detail,
+					src/lib/AeonKitMapper/src/ModuleExporter,
+					src/lib/AeonNode/lib/thunderclap,
+					src/lib/AeonNode/lib/thunderclap/detail,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcshareddata,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcuserdata/Akira.xcuserdatad,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/xcuserdata/Akira.xcuserdatad/xcschemes,
+					src/lib/AeonNode/src,
 					../../../addons/ofxDatGui/src,
 					../../../addons/ofxDatGui/src/components,
 					../../../addons/ofxDatGui/src/core,
+					../../../addons/ofxDatGui/src/libs,
+					../../../addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../../addons/ofxDatGui/src/themes,
 					../../../addons/ofxHierarchy/src,
+					../../../addons/ofxSmartFont/src,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
 			};
@@ -736,19 +847,48 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					"src/**",
+					src,
+					src/lib/AeonKitMapper/lib/ujson,
+					src/lib/AeonKitMapper/lib/ujson/examples,
+					src/lib/AeonKitMapper/lib/ujson/test,
+					src/lib/AeonKitMapper/lib/ujson/test/testcases,
+					src/lib/AeonKitMapper/lib/ujson/ujson,
+					"src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion",
+					src/lib/AeonKitMapper/src,
+					src/lib/AeonKitMapper/src/Module,
+					src/lib/AeonKitMapper/src/Module/Condition,
+					src/lib/AeonKitMapper/src/Module/Condition/detail,
+					src/lib/AeonKitMapper/src/Module/Hardware,
+					src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule,
+					src/lib/AeonKitMapper/src/Module/Hardware/SensorModule,
+					src/lib/AeonKitMapper/src/Module/Logic,
+					src/lib/AeonKitMapper/src/Module/Utility/CounterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule,
+					src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/detail,
+					src/lib/AeonKitMapper/src/Module/detail,
+					src/lib/AeonKitMapper/src/ModuleExporter,
+					src/lib/AeonNode/lib/thunderclap,
+					src/lib/AeonNode/lib/thunderclap/detail,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcshareddata,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/project.xcworkspace/xcuserdata/Akira.xcuserdatad,
+					src/lib/AeonNode/lib/thunderclap/thunderclap.xcodeproj/xcuserdata/Akira.xcuserdatad/xcschemes,
+					src/lib/AeonNode/src,
 					../../../addons/ofxDatGui/src,
 					../../../addons/ofxDatGui/src/components,
 					../../../addons/ofxDatGui/src/core,
+					../../../addons/ofxDatGui/src/libs,
+					../../../addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../../addons/ofxDatGui/src/themes,
 					../../../addons/ofxHierarchy/src,
+					../../../addons/ofxSmartFont/src,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;

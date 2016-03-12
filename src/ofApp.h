@@ -8,7 +8,7 @@
 class ofApp : public ofBaseApp{
 public:
 	ofxHierarchy::View view;
-	std::vector<ofxDatGuiComponent *> components;
+	ofxDatGui *gui;
 	
 	void setup();
 	void update();

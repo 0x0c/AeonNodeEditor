@@ -13,7 +13,7 @@
 
 namespace AeonKitMapper {
 	template <typename T> class StringConverterModule : public Module<std::string> {
-		ofxDatGuiComponent *input_number_label;
+		ofxDatGuiLabel *input_number_label;
 		T input_number;
 	public:
 		StringConverterModule(float x, float y);

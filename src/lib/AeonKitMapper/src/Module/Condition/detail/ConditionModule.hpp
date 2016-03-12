@@ -13,27 +13,27 @@ namespace AeonKitMapper {
 		std::string result = "";
 		switch (type) {
 			case Equal: {
-				result = "Equal";
+				result = "== : Equal";
 			}
 				break;
 			case NotEqual: {
-				result = "NotEqual";
+				result = "!= : NotEqual";
 			}
 				break;
 			case Grater: {
-				result = "Grater";
+				result = "> : Grater";
 			}
 				break;
 			case GraterThan: {
-				result = "GraterThan";
+				result = ">= : GraterThan";
 			}
 				break;
 			case Less: {
-				result = "Less";
+				result = "< : Less";
 			}
 				break;
 			case LessThan: {
-				result = "LessThan";
+				result = "<= : LessThan";
 			}
 				break;
 		}

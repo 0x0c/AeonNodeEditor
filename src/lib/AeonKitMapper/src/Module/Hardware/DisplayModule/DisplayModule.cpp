@@ -15,13 +15,11 @@ namespace AeonKitMapper {
 	
 	OLEDDisplay::OLEDDisplay(float x, float y) : DisplayModule("OLEDDisplay", x, y) {
 		this->add_connector("str", (std::type_info *)&typeid(std::string), AeonNode::Connector::Type::Input);
-		this->display_text_label = this->gui->addButton("");
+		this->display_text_label = this->gui->addLabel("");
 	}
 	
 	void OLEDDisplay::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
 		std::string str = boost::any_cast<std::string>(data);
 		this->display_text_label->setLabel(str);
 	}
-	
-	
 }

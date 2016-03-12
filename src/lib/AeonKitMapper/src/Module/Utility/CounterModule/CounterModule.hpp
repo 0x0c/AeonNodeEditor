@@ -15,7 +15,7 @@ namespace AeonKitMapper {
 	class CounterModule : public Module<int> {
 	private:
 		int counter;
-		ofxDatGuiComponent *counter_label;
+		ofxDatGuiLabel *counter_label;
 	public:
 		CounterModule(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);

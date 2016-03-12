@@ -12,7 +12,7 @@ namespace AeonKitMapper {
 	template <typename T> StringConverterModule<T>::StringConverterModule(float x, float y) : Module("StringConverter", x, y) {
 		this->add_connector("num", (std::type_info *)&typeid(T), AeonNode::Connector::Type::Input);
 		this->add_connector("str", (std::type_info *)&typeid(std::string), AeonNode::Connector::Type::Output);
-		this->input_number_label = this->gui->addButton("");
+		this->input_number_label = this->gui->addLabel("");
 	}
 	
 	template <typename T> void StringConverterModule<T>::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {

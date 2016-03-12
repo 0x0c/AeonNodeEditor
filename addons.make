@@ -1,2 +1,3 @@
 ofxDatGui
 ofxHierarchy
+ofxSmartFont

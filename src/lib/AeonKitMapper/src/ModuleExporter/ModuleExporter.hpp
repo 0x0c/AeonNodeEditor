@@ -9,9 +9,11 @@
 #ifndef ModuleExporter_hpp
 #define ModuleExporter_hpp
 
+#include "Node.hpp"
+
 namespace AeonKitMapper {
 	class ModuleExporter {
-		static void export_module_relation();
+		static void export_module_relation(std::vector<AeonNode::Node> module);
 	};
 }
 

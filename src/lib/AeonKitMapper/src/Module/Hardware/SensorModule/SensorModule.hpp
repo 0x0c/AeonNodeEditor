@@ -16,7 +16,6 @@ namespace AeonKitMapper {
 	public:
 		SensorModule(std::string module_name, float x, float y) : HardwareModule<T>(module_name, x, y) {
 			this->add_connector("check", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-			this->add_connector("sensor_data", (std::type_info *)&typeid(float), AeonNode::Connector::Type::Output);
 		}
 		
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
@@ -45,6 +44,7 @@ namespace AeonKitMapper {
 	private:
 		float position;
 		float pressure;
+		void onSliderEvent(ofxDatGuiSliderEvent e);
 	public:
 		TouchSensor(float x, float y);
 		virtual float eval();

@@ -31,7 +31,7 @@ namespace AeonKitMapper {
 	
 	class OLEDDisplay : public DisplayModule<std::string> {
 	private:
-		ofxDatGuiComponent *display_text_label;
+		ofxDatGuiLabel *display_text_label;
 	public:
 		OLEDDisplay(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);

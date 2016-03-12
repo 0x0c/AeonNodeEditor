@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../addons/ofxDatGui/src/core/ofxDatGuiComponent.cpp"
-            timestampString = "479465752.924524"
+            filePath = "src/lib/AeonKitMapper/src/Module/Hardware/SensorModule/SensorModule.cpp"
+            timestampString = "479497689.81038"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "ofxDatGuiComponent::~ofxDatGuiComponent()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "TouchSensor::onSliderEvent(ofxDatGuiSliderEvent e)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/lib/AeonNode/src/Connector.cpp"
+            timestampString = "479497737.927975"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "Connector::send_data(Node *from, boost::any data)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
