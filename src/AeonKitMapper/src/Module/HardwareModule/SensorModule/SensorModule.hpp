@@ -15,7 +15,6 @@ namespace AeonKitMapper {
 	template <typename T> class SensorModule : public HardwareModule<T> {
 	public:
 		SensorModule(float x, float y) : HardwareModule<T>("SensorModule", x, y) {
-			this->gui->addButton("Send Data");
 			this->add_connector("check", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 			this->add_connector("sensor_data", (std::type_info *)&typeid(float), AeonNode::Connector::Type::Output);
 		}

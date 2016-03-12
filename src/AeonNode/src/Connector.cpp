@@ -11,6 +11,21 @@
 
 namespace AeonNode {
 	const std::string Connector::MouseReleaseNotification = "MouseReleaseNotification";
+
+	ofColor type_color(std::string type) {
+		ofColor color = ofColor::wheat;
+		if (type == "i") {
+			color = ofColor::indianRed;
+		}
+		else if (type == "b") {
+			color = ofColor::deepSkyBlue;
+		}
+		else if (type == "f") {
+			color = ofColor::lightCoral;
+		}
+		
+		return color;
+	}
 	
 	thunderclap::thunderclap<std::tuple<ofxHierarchy::Point, Connector*>>* Connector::shared_observer() {
 		static thunderclap::thunderclap<std::tuple<ofxHierarchy::Point, Connector*>> shared_observer;
@@ -71,18 +86,28 @@ namespace AeonNode {
 	}
 	
 	bool Connector::connect(Connector *connector) {
+		bool result = false;
 		if (this->type != connector->type && this->is_connectable_type(connector->get_connectable_type())) {
+			if (connector->parent_connector != nullptr) {
+				connector->disconnect(connector->parent_connector);
+			}
+			result = true;
 			connector->parent_connector = this;
 			this->connected_connector.push_back(connector);
 		}
+		
+		return result;
 	}
 	
 	void Connector::disconnect(Connector *connector) {
+		Connector *c = connector;
 		if (connector == nullptr) {
-			connector = this->parent_connector;
+			c = this->parent_connector;
 		}
-		connector->connected_connector.erase(std::remove(connector->connected_connector.begin(), connector->connected_connector.end(), this), connector->connected_connector.end());
-		this->parent_connector = nullptr;
+		if (c != nullptr && c->connected_connector.size()) {
+			c->connected_connector.erase(std::remove(c->connected_connector.begin(), c->connected_connector.end(), this), c->connected_connector.end());
+			this->parent_connector = nullptr;			
+		}
 	}
 	
 	void Connector::draw() {
@@ -97,12 +122,8 @@ namespace AeonNode {
 			ofBezierVertex(sx + (ex - sx) * 0.3, sy, ex - (ex - sx) * 0.3, ey, ex, ey);
 			ofEndShape();
 			ofFill();
-			if (this->type == Input) {
-				ofSetColor(ofColor::skyBlue);
-			}
-			else {
-				ofSetColor(ofColor::indianRed);
-			}
+			
+			ofSetColor(type_color(std::string(this->connectable_type->name())));
 			ofDrawCircle(node->center().x, node->center().y, 7);
 		}
 		
@@ -118,19 +139,14 @@ namespace AeonNode {
 		}
 		
 		ofFill();
-		if (this->type == Input) {
-			ofSetColor(ofColor::indianRed);
-		}
-		else {
-			ofSetColor(ofColor::skyBlue);
-		}
+		ofSetColor(type_color(std::string(this->connectable_type->name())));
 		ofDrawCircle(this->center().x, this->center().y, this->selected ? 10 : 7);
 		ofNoFill();
 		ofSetColor(ofColor::white);
 		this->label_font.drawString(this->tag, this->frame.origin.x, this->center().y - 10);
 	}
 	
-	Connector::Connector(Node *parent_node, std::type_info *connectable_type, Connector::Type type) : parent_node(parent_node), type(type), connectable_type(connectable_type) {
+	Connector::Connector(Node *parent_node, std::type_info *connectable_type, Connector::Type type) : parent_node(parent_node), parent_connector(nullptr), type(type), connectable_type(connectable_type) {
 		this->frame.size.width = 14;
 		this->frame.size.height = 14;
 		this->label_font.load("arial.ttf", 8);

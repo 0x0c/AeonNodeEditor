@@ -338,10 +338,10 @@
 		E9C77EC41C942BF2001F1DC3 /* HardwareModule */ = {
 			isa = PBXGroup;
 			children = (
+				E9C77ECA1C942BF2001F1DC3 /* SensorModule */,
 				E9C77EC51C942BF2001F1DC3 /* DisplayModule */,
 				E9C77EC81C942BF2001F1DC3 /* HardwareModule.cpp */,
 				E9C77EC91C942BF2001F1DC3 /* HardwareModule.hpp */,
-				E9C77ECA1C942BF2001F1DC3 /* SensorModule */,
 			);
 			path = HardwareModule;
 			sourceTree = "<group>";
