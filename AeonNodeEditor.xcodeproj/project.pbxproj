@@ -85,6 +85,7 @@
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E96B47991C94618900C98607 /* ConditionModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConditionModule.hpp; sourceTree = "<group>"; };
 		E98143EE1C90BB2C00A0DB31 /* thunderclap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thunderclap.h; sourceTree = "<group>"; };
 		E98143F21C90BB2C00A0DB31 /* thunderclap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thunderclap.cpp; sourceTree = "<group>"; };
 		E98143F31C90BB2C00A0DB31 /* thunderclap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thunderclap.h; sourceTree = "<group>"; };
@@ -241,6 +242,14 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
+		E96B47981C94618300C98607 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				E96B47991C94618900C98607 /* ConditionModule.hpp */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
 		E98143E91C90BB2C00A0DB31 /* AeonNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +350,7 @@
 		E9C77EE41C9459C1001F1DC3 /* Condition */ = {
 			isa = PBXGroup;
 			children = (
+				E96B47981C94618300C98607 /* detail */,
 				E9C77EE51C9459C1001F1DC3 /* ConditionModule.cpp */,
 				E9C77EE61C9459C1001F1DC3 /* ConditionModule.hpp */,
 			);
@@ -350,10 +360,10 @@
 		E9C77EE71C9459C1001F1DC3 /* Hardware */ = {
 			isa = PBXGroup;
 			children = (
+				E9C77EED1C9459C1001F1DC3 /* SensorModule */,
 				E9C77EE81C9459C1001F1DC3 /* DisplayModule */,
 				E9C77EEB1C9459C1001F1DC3 /* HardwareModule.cpp */,
 				E9C77EEC1C9459C1001F1DC3 /* HardwareModule.hpp */,
-				E9C77EED1C9459C1001F1DC3 /* SensorModule */,
 			);
 			path = Hardware;
 			sourceTree = "<group>";

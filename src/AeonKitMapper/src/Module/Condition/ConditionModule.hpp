@@ -13,9 +13,6 @@
 
 namespace AeonKitMapper {
 	template <typename T> class ConditionModule : public Module<bool> {
-	private:
-		T in1;
-		T in2;
 	public:
 		typedef enum {
 			Equal,
@@ -25,7 +22,13 @@ namespace AeonKitMapper {
 			Less,
 			LessThan,
 		} ComparisonType;
-		
+	private:
+		T in1;
+		T in2;
+		ofxDatGuiButton *comparison_type_button;
+		std::string comparison_type_text(ComparisonType type);
+		void onButtonEvent(ofxDatGuiButtonEvent e);
+	public:
 		ConditionModule(float x, float y);
 		ComparisonType type;
 		void switch_comparison_type();
@@ -35,5 +38,7 @@ namespace AeonKitMapper {
 		virtual bool update_output_state();
 	};
 }
+
+#include "detail/ConditionModule.hpp"
 
 #endif /* ConditionModule_hpp */

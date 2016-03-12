@@ -35,6 +35,7 @@ namespace AeonNode {
 		virtual void onMouseDragged(ofMouseEventArgs& mouseArgs);
 	public:
 		Node(ofxHierarchy::Rect f);
+		virtual void connected(Connector *to) {};
 		virtual void add_connector(std::string tag, std::type_info *connectable_type, Connector::Type type);
 		virtual void send_data(boost::any data);
 		virtual void received_data(Node *from, Connector *connector, boost::any data) = 0;

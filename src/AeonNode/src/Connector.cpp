@@ -94,6 +94,7 @@ namespace AeonNode {
 			result = true;
 			connector->parent_connector = this;
 			this->connected_connector.push_back(connector);
+			this->parent_node->connected(connector);
 		}
 		
 		return result;
@@ -139,7 +140,6 @@ namespace AeonNode {
 		}
 		
 		ofFill();
-//		std::cout << std::string(this->connectable_type->name()) << std::endl;
 		ofSetColor(type_color(std::string(this->connectable_type->name())));
 		ofDrawCircle(this->center().x, this->center().y, this->selected ? 10 : 7);
 		ofNoFill();

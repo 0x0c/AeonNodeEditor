@@ -9,7 +9,7 @@
 #include "SensorModule.hpp"
 
 namespace AeonKitMapper {
-	TiltSensor::TiltSensor(float x, float y) : SensorModule(x, y), tilt(false) {}
+	TiltSensor::TiltSensor(float x, float y) : SensorModule("Tilt", x, y), tilt(false) {}
 	
 	bool TiltSensor::eval() {
 		return this->get_tilt_status();
@@ -27,7 +27,7 @@ namespace AeonKitMapper {
 		return this->tilt;
 	}
 	
-	TouchSensor::TouchSensor(float x, float y) : SensorModule(x, y), position(0), pressure(0) {}
+	TouchSensor::TouchSensor(float x, float y) : SensorModule("Touch", x, y), position(0), pressure(0) {}
 	
 	float TouchSensor::eval() {
 		return this->get_position();
@@ -50,7 +50,7 @@ namespace AeonKitMapper {
 		return this->pressure;
 	}
 	
-	DepthSensor::DepthSensor(float x, float y) : SensorModule(x, y), depth(0) {
+	DepthSensor::DepthSensor(float x, float y) : SensorModule("Depth", x, y), depth(0) {
 		ofxDatGuiSlider *depth_slider = this->gui->addSlider("depth", 0, 255);
 		depth_slider->onSliderEvent(this,& DepthSensor::onSliderEvent);
 		depth_slider->bind(&this->depth, 0, 255);
