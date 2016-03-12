@@ -26,14 +26,8 @@ namespace AeonKitMapper {
 			}
 		}
 		
-		virtual void eval_and_send() {
-			float result = this->eval();
-			return result;
-		}
-		
-		virtual T update_output_state() {
-			this->send_data(this->eval());
-		}
+		virtual T update_output_state() = 0;
+		virtual void eval_and_send() = 0;
 	};
 	
 	class TiltSensor : public SensorModule<bool> {
@@ -42,6 +36,8 @@ namespace AeonKitMapper {
 	public:
 		TiltSensor(float x, float y);
 		virtual bool eval();
+		virtual void eval_and_send();
+		virtual bool update_output_state();
 		bool get_tilt_status();
 	};
 	
@@ -61,9 +57,12 @@ namespace AeonKitMapper {
 	class DepthSensor : public SensorModule<float> {
 	private:
 		float depth;
+		void onSliderEvent(ofxDatGuiSliderEvent e);
 	public:
 		DepthSensor(float x, float y);
 		virtual float eval();
+		virtual void eval_and_send();
+		virtual float update_output_state();
 		float get_depth();
 	};
 }

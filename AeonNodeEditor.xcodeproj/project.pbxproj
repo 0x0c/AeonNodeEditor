@@ -16,12 +16,13 @@
 		E9C77E8E1C941FC8001F1DC3 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143F81C90BB2C00A0DB31 /* Connector.cpp */; };
 		E9C77E8F1C941FC8001F1DC3 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143FA1C90BB2C00A0DB31 /* Node.cpp */; };
 		E9C77EAD1C9424E8001F1DC3 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EA31C9424BE001F1DC3 /* Module.cpp */; };
-		E9C77ED91C943234001F1DC3 /* UtilityModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ED11C942BF2001F1DC3 /* UtilityModule.cpp */; };
-		E9C77EDA1C943262001F1DC3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ECE1C942BF2001F1DC3 /* LogicModule.cpp */; };
-		E9C77EDB1C943284001F1DC3 /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC21C942BF2001F1DC3 /* ConditionModule.cpp */; };
-		E9C77EDF1C9433BB001F1DC3 /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC81C942BF2001F1DC3 /* HardwareModule.cpp */; };
-		E9C77EE21C943825001F1DC3 /* SensorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ECB1C942BF2001F1DC3 /* SensorModule.cpp */; };
-		E9C77EE31C943826001F1DC3 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC61C942BF2001F1DC3 /* DisplayModule.cpp */; };
+		E9C77EFB1C945A02001F1DC3 /* CounterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EF91C945A02001F1DC3 /* CounterModule.cpp */; };
+		E9C77EFE1C945A09001F1DC3 /* StringConverterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EFC1C945A09001F1DC3 /* StringConverterModule.cpp */; };
+		E9C77F001C945B15001F1DC3 /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EE51C9459C1001F1DC3 /* ConditionModule.cpp */; };
+		E9C77F011C945B15001F1DC3 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EE91C9459C1001F1DC3 /* DisplayModule.cpp */; };
+		E9C77F021C945B15001F1DC3 /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EEB1C9459C1001F1DC3 /* HardwareModule.cpp */; };
+		E9C77F031C945B15001F1DC3 /* SensorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EEE1C9459C1001F1DC3 /* SensorModule.cpp */; };
+		E9C77F041C945B2C001F1DC3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EF11C9459C1001F1DC3 /* LogicModule.cpp */; };
 		F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */; };
 /* End PBXBuildFile section */
 
@@ -94,19 +95,22 @@
 		E9C77E921C9424BE001F1DC3 /* AeonKitMapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AeonKitMapper.hpp; sourceTree = "<group>"; };
 		E9C77EA31C9424BE001F1DC3 /* Module.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Module.cpp; sourceTree = "<group>"; };
 		E9C77EA41C9424BE001F1DC3 /* Module.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Module.hpp; sourceTree = "<group>"; };
-		E9C77EC21C942BF2001F1DC3 /* ConditionModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConditionModule.cpp; sourceTree = "<group>"; };
-		E9C77EC31C942BF2001F1DC3 /* ConditionModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConditionModule.hpp; sourceTree = "<group>"; };
-		E9C77EC61C942BF2001F1DC3 /* DisplayModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisplayModule.cpp; sourceTree = "<group>"; };
-		E9C77EC71C942BF2001F1DC3 /* DisplayModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisplayModule.hpp; sourceTree = "<group>"; };
-		E9C77EC81C942BF2001F1DC3 /* HardwareModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HardwareModule.cpp; sourceTree = "<group>"; };
-		E9C77EC91C942BF2001F1DC3 /* HardwareModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HardwareModule.hpp; sourceTree = "<group>"; };
-		E9C77ECB1C942BF2001F1DC3 /* SensorModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SensorModule.cpp; sourceTree = "<group>"; };
-		E9C77ECC1C942BF2001F1DC3 /* SensorModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SensorModule.hpp; sourceTree = "<group>"; };
-		E9C77ECE1C942BF2001F1DC3 /* LogicModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogicModule.cpp; sourceTree = "<group>"; };
-		E9C77ECF1C942BF2001F1DC3 /* LogicModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogicModule.hpp; sourceTree = "<group>"; };
-		E9C77ED11C942BF2001F1DC3 /* UtilityModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UtilityModule.cpp; sourceTree = "<group>"; };
-		E9C77ED21C942BF2001F1DC3 /* UtilityModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UtilityModule.hpp; sourceTree = "<group>"; };
 		E9C77EE11C9435A3001F1DC3 /* Module.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Module.hpp; sourceTree = "<group>"; };
+		E9C77EE51C9459C1001F1DC3 /* ConditionModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConditionModule.cpp; sourceTree = "<group>"; };
+		E9C77EE61C9459C1001F1DC3 /* ConditionModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConditionModule.hpp; sourceTree = "<group>"; };
+		E9C77EE91C9459C1001F1DC3 /* DisplayModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DisplayModule.cpp; sourceTree = "<group>"; };
+		E9C77EEA1C9459C1001F1DC3 /* DisplayModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DisplayModule.hpp; sourceTree = "<group>"; };
+		E9C77EEB1C9459C1001F1DC3 /* HardwareModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HardwareModule.cpp; sourceTree = "<group>"; };
+		E9C77EEC1C9459C1001F1DC3 /* HardwareModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HardwareModule.hpp; sourceTree = "<group>"; };
+		E9C77EEE1C9459C1001F1DC3 /* SensorModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SensorModule.cpp; sourceTree = "<group>"; };
+		E9C77EEF1C9459C1001F1DC3 /* SensorModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SensorModule.hpp; sourceTree = "<group>"; };
+		E9C77EF11C9459C1001F1DC3 /* LogicModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogicModule.cpp; sourceTree = "<group>"; };
+		E9C77EF21C9459C1001F1DC3 /* LogicModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogicModule.hpp; sourceTree = "<group>"; };
+		E9C77EF91C945A02001F1DC3 /* CounterModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CounterModule.cpp; sourceTree = "<group>"; };
+		E9C77EFA1C945A02001F1DC3 /* CounterModule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CounterModule.hpp; sourceTree = "<group>"; };
+		E9C77EFC1C945A09001F1DC3 /* StringConverterModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringConverterModule.cpp; sourceTree = "<group>"; };
+		E9C77EFD1C945A09001F1DC3 /* StringConverterModule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringConverterModule.hpp; sourceTree = "<group>"; };
+		E9C77EFF1C945A12001F1DC3 /* StringConverterModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringConverterModule.hpp; sourceTree = "<group>"; };
 		F59384ED57A7C6A7A8B0351D /* ofxDatGuiEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiEvents.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiEvents.h; sourceTree = SOURCE_ROOT; };
 		FDA86F4C2F1F1964D35391C6 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiButton.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -315,10 +319,10 @@
 		E9C77E931C9424BE001F1DC3 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				E9C77EC11C942BF2001F1DC3 /* ConditionModule */,
-				E9C77EC41C942BF2001F1DC3 /* HardwareModule */,
-				E9C77ECD1C942BF2001F1DC3 /* LogicModule */,
-				E9C77ED01C942BF2001F1DC3 /* UtilityModule */,
+				E9C77EF31C9459FB001F1DC3 /* Utility */,
+				E9C77EE41C9459C1001F1DC3 /* Condition */,
+				E9C77EE71C9459C1001F1DC3 /* Hardware */,
+				E9C77EF01C9459C1001F1DC3 /* Logic */,
 				E9C77EA31C9424BE001F1DC3 /* Module.cpp */,
 				E9C77EA41C9424BE001F1DC3 /* Module.hpp */,
 				E9C77EE01C9435A3001F1DC3 /* detail */,
@@ -326,66 +330,93 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		E9C77EC11C942BF2001F1DC3 /* ConditionModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77EC21C942BF2001F1DC3 /* ConditionModule.cpp */,
-				E9C77EC31C942BF2001F1DC3 /* ConditionModule.hpp */,
-			);
-			path = ConditionModule;
-			sourceTree = "<group>";
-		};
-		E9C77EC41C942BF2001F1DC3 /* HardwareModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77ECA1C942BF2001F1DC3 /* SensorModule */,
-				E9C77EC51C942BF2001F1DC3 /* DisplayModule */,
-				E9C77EC81C942BF2001F1DC3 /* HardwareModule.cpp */,
-				E9C77EC91C942BF2001F1DC3 /* HardwareModule.hpp */,
-			);
-			path = HardwareModule;
-			sourceTree = "<group>";
-		};
-		E9C77EC51C942BF2001F1DC3 /* DisplayModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77EC61C942BF2001F1DC3 /* DisplayModule.cpp */,
-				E9C77EC71C942BF2001F1DC3 /* DisplayModule.hpp */,
-			);
-			path = DisplayModule;
-			sourceTree = "<group>";
-		};
-		E9C77ECA1C942BF2001F1DC3 /* SensorModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77ECB1C942BF2001F1DC3 /* SensorModule.cpp */,
-				E9C77ECC1C942BF2001F1DC3 /* SensorModule.hpp */,
-			);
-			path = SensorModule;
-			sourceTree = "<group>";
-		};
-		E9C77ECD1C942BF2001F1DC3 /* LogicModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77ECE1C942BF2001F1DC3 /* LogicModule.cpp */,
-				E9C77ECF1C942BF2001F1DC3 /* LogicModule.hpp */,
-			);
-			path = LogicModule;
-			sourceTree = "<group>";
-		};
-		E9C77ED01C942BF2001F1DC3 /* UtilityModule */ = {
-			isa = PBXGroup;
-			children = (
-				E9C77ED11C942BF2001F1DC3 /* UtilityModule.cpp */,
-				E9C77ED21C942BF2001F1DC3 /* UtilityModule.hpp */,
-			);
-			path = UtilityModule;
-			sourceTree = "<group>";
-		};
 		E9C77EE01C9435A3001F1DC3 /* detail */ = {
 			isa = PBXGroup;
 			children = (
 				E9C77EE11C9435A3001F1DC3 /* Module.hpp */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		E9C77EE41C9459C1001F1DC3 /* Condition */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EE51C9459C1001F1DC3 /* ConditionModule.cpp */,
+				E9C77EE61C9459C1001F1DC3 /* ConditionModule.hpp */,
+			);
+			path = Condition;
+			sourceTree = "<group>";
+		};
+		E9C77EE71C9459C1001F1DC3 /* Hardware */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EE81C9459C1001F1DC3 /* DisplayModule */,
+				E9C77EEB1C9459C1001F1DC3 /* HardwareModule.cpp */,
+				E9C77EEC1C9459C1001F1DC3 /* HardwareModule.hpp */,
+				E9C77EED1C9459C1001F1DC3 /* SensorModule */,
+			);
+			path = Hardware;
+			sourceTree = "<group>";
+		};
+		E9C77EE81C9459C1001F1DC3 /* DisplayModule */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EE91C9459C1001F1DC3 /* DisplayModule.cpp */,
+				E9C77EEA1C9459C1001F1DC3 /* DisplayModule.hpp */,
+			);
+			path = DisplayModule;
+			sourceTree = "<group>";
+		};
+		E9C77EED1C9459C1001F1DC3 /* SensorModule */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EEE1C9459C1001F1DC3 /* SensorModule.cpp */,
+				E9C77EEF1C9459C1001F1DC3 /* SensorModule.hpp */,
+			);
+			path = SensorModule;
+			sourceTree = "<group>";
+		};
+		E9C77EF01C9459C1001F1DC3 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EF11C9459C1001F1DC3 /* LogicModule.cpp */,
+				E9C77EF21C9459C1001F1DC3 /* LogicModule.hpp */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		E9C77EF31C9459FB001F1DC3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EF41C9459FB001F1DC3 /* CounterModule */,
+				E9C77EF51C9459FB001F1DC3 /* StringConverterModule */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		E9C77EF41C9459FB001F1DC3 /* CounterModule */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EF91C945A02001F1DC3 /* CounterModule.cpp */,
+				E9C77EFA1C945A02001F1DC3 /* CounterModule.hpp */,
+			);
+			path = CounterModule;
+			sourceTree = "<group>";
+		};
+		E9C77EF51C9459FB001F1DC3 /* StringConverterModule */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EF61C9459FB001F1DC3 /* detail */,
+				E9C77EFC1C945A09001F1DC3 /* StringConverterModule.cpp */,
+				E9C77EFD1C945A09001F1DC3 /* StringConverterModule.hpp */,
+			);
+			path = StringConverterModule;
+			sourceTree = "<group>";
+		};
+		E9C77EF61C9459FB001F1DC3 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				E9C77EFF1C945A12001F1DC3 /* StringConverterModule.hpp */,
 			);
 			path = detail;
 			sourceTree = "<group>";
@@ -486,12 +517,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C77EE31C943826001F1DC3 /* DisplayModule.cpp in Sources */,
-				E9C77EE21C943825001F1DC3 /* SensorModule.cpp in Sources */,
-				E9C77EDF1C9433BB001F1DC3 /* HardwareModule.cpp in Sources */,
-				E9C77EDB1C943284001F1DC3 /* ConditionModule.cpp in Sources */,
-				E9C77EDA1C943262001F1DC3 /* LogicModule.cpp in Sources */,
-				E9C77ED91C943234001F1DC3 /* UtilityModule.cpp in Sources */,
+				E9C77F041C945B2C001F1DC3 /* LogicModule.cpp in Sources */,
+				E9C77EFB1C945A02001F1DC3 /* CounterModule.cpp in Sources */,
+				E9C77F001C945B15001F1DC3 /* ConditionModule.cpp in Sources */,
+				E9C77F011C945B15001F1DC3 /* DisplayModule.cpp in Sources */,
+				E9C77F021C945B15001F1DC3 /* HardwareModule.cpp in Sources */,
+				E9C77F031C945B15001F1DC3 /* SensorModule.cpp in Sources */,
+				E9C77EFE1C945A09001F1DC3 /* StringConverterModule.cpp in Sources */,
 				E9C77EAD1C9424E8001F1DC3 /* Module.cpp in Sources */,
 				E9C77E8E1C941FC8001F1DC3 /* Connector.cpp in Sources */,
 				E9C77E8F1C941FC8001F1DC3 /* Node.cpp in Sources */,

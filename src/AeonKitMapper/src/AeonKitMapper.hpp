@@ -10,11 +10,12 @@
 #define AeonKitMapper_hpp
 
 #include "Module/Module.hpp"
-#include "Module/ConditionModule/ConditionModule.hpp"
-#include "Module/LogicModule/LogicModule.hpp"
-#include "Module/UtilityModule/UtilityModule.hpp"
-#include "Module/HardwareModule/HardwareModule.hpp"
-#include "Module/HardwareModule/SensorModule/SensorModule.hpp"
-#include "Module/HardwareModule/DisplayModule/DisplayModule.hpp"
+#include "Module/Condition/ConditionModule.hpp"
+#include "Module/Logic/LogicModule.hpp"
+#include "Module/Utility/CounterModule/CounterModule.hpp"
+#include "Module/Utility/StringConverterModule/StringConverterModule.hpp"
+#include "Module/Hardware/HardwareModule.hpp"
+#include "Module/Hardware/SensorModule/SensorModule.hpp"
+#include "Module/Hardware/DisplayModule/DisplayModule.hpp"
 
 #endif /* AeonKitMapper_hpp */

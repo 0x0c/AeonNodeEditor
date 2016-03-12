@@ -1,13 +1,13 @@
 //
-//  UtilityModule.hpp
+//  CounterModule.hpp
 //  AeonNodeEditor
 //
 //  Created by Akira Matsuda on 3/12/16.
 //
 //
 
-#ifndef UtilityModule_hpp
-#define UtilityModule_hpp
+#ifndef CounterModule_hpp
+#define CounterModule_hpp
 
 #include "../Module.hpp"
 
@@ -27,4 +27,4 @@ namespace AeonKitMapper {
 	};
 }
 
-#endif /* UtilityModule_hpp */
+#endif /* CounterModule_hpp */

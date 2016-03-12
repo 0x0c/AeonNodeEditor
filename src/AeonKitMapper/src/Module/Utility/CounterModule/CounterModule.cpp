@@ -1,14 +1,14 @@
 //
-//  UtilityModule.cpp
+//  CounterModule.cpp
 //  AeonNodeEditor
 //
 //  Created by Akira Matsuda on 3/12/16.
 //
 //
 
-#include "UtilityModule.hpp"
+#include "CounterModule.hpp"
 
-namespace AeonKitMapper {	
+namespace AeonKitMapper {
 	CounterModule::CounterModule(float x, float y) : Module("Counter", x, y) , counter(0) {
 		this->add_connector("in", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 		this->add_connector("out", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
@@ -37,6 +37,7 @@ namespace AeonKitMapper {
 	
 	int CounterModule::update_output_state() {
 		this->counter_label->setLabel(std::to_string(this->eval()));
+		return this->eval();
 	}
 	
 	void CounterModule::increment() {

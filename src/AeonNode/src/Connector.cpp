@@ -139,6 +139,7 @@ namespace AeonNode {
 		}
 		
 		ofFill();
+//		std::cout << std::string(this->connectable_type->name()) << std::endl;
 		ofSetColor(type_color(std::string(this->connectable_type->name())));
 		ofDrawCircle(this->center().x, this->center().y, this->selected ? 10 : 7);
 		ofNoFill();
