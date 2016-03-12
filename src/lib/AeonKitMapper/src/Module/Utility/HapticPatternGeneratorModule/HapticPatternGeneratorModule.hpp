@@ -31,7 +31,7 @@ namespace AeonKitMapper {
 				}
 					break;
 				case HapticDisplay::HapticPattern::LongDuration: {
-					result = "ShortDuration";
+					result = "LongDuration";
 				}
 					break;
 			}
