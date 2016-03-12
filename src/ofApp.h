@@ -4,7 +4,6 @@
 #include "ofMain.h"
 #include "ofxDatGui.h"
 #include "ofxHierarchy.h"
-#include "AeonNode/src/Node.hpp"
 
 class ofApp : public ofBaseApp{
 public:

@@ -1,5 +1,5 @@
 #include "ofApp.h"
-#include "AeonKitMapper/src/Module/Module.hpp"
+#include "AeonKitMapper.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
