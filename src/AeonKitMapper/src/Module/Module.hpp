@@ -27,6 +27,7 @@ namespace AeonKitMapper {
 		std::string get_module_name();
 		void update(ofEventArgs &args);
 		Module(std::string module_name, float x, float y);
+		~Module();
 		virtual void add_connector(std::string tag, AeonNode::Connector::Type type);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) = 0;
 		virtual T eval() = 0;
@@ -39,31 +40,52 @@ namespace AeonKitMapper {
 		HardwareModule(std::string module_name, float x, float y);
 	};
 	
-	class SensorModule : public HardwareModule<float> {
+	template <typename T> class SensorModule : public HardwareModule<T> {
 	public:
 		SensorModule(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
+		virtual void eval_and_send();
+		virtual T update_output_state();
 	};
 	
-	class TiltSensor : public SensorModule {
-		
+	class TiltSensor : public SensorModule<bool> {
+	private:
+		bool tilt;
+	public:
+		TiltSensor(float x, float y);
+		virtual bool eval();
+		bool get_tilt_status();
 	};
 	
-	class TouchSensor : public SensorModule {
-		
+	class TouchSensor : public SensorModule<float> {
+	private:
+		float position;
+		float pressure;
+	public:
+		TouchSensor(float x, float y);
+		virtual float eval();
+		virtual void eval_and_send();
+		virtual float update_output_state();
+		float get_position();
+		float get_pressure();
 	};
 	
-	class DepthSensor : public SensorModule {
-		
+	class DepthSensor : public SensorModule<float> {
+	private:
+		float depth;
+	public:
+		DepthSensor(float x, float y);
+		virtual float eval();
+		float get_depth();
 	};
 	
-	class DisplayModule : public HardwareModule<void> {
+	template <typename T> class DisplayModule : public HardwareModule<T> {
 	public:
 		DisplayModule(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
 	};
 	
-	class HapticDisplay : public DisplayModule {
+	class HapticDisplay : public DisplayModule<int> {
 	public:
 		HapticDisplay(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
@@ -72,10 +94,11 @@ namespace AeonKitMapper {
 	// 論理モジュール
 	class LogicModule : public Module<bool> {
 	protected:
-		std::map<AeonNode::Connector*, std::tuple<bool, ofxDatGuiToggle *>> connector_state;
+		std::map<AeonNode::Connector*, ofxDatGuiToggle *> connector_state;
 	public:
 		LogicModule(std::string module_name, float x, float y);
 		void clear_input_state();
+		void onToggleEvent(ofxDatGuiButtonEvent e);
 		virtual void add_connector(std::string tag, AeonNode::Connector::Type type);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
 		virtual void eval_and_send();
@@ -106,22 +129,14 @@ namespace AeonKitMapper {
 		virtual bool eval();
 	};
 	
-	class LogicTrueModule : public LogicModule {
+	class LogicBooleanModule : public LogicModule {
 	public:
-		LogicTrueModule(float x, float y);
-		virtual bool eval();
-		void onButtonEvent(ofxDatGuiButtonEvent e);
-	};
-	
-	class LogicFalseModule : public LogicModule {
-	public:
-		LogicFalseModule(float x, float y);
+		LogicBooleanModule(float x, float y);
 		virtual bool eval();
 		void onButtonEvent(ofxDatGuiButtonEvent e);
 	};
 	
 	// モジュール駆動モジュール
-	
 	
 	// Utilityモジュール
 	class CounterModule : public Module<int> {

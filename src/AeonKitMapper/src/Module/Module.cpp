@@ -44,6 +44,10 @@ namespace AeonKitMapper {
 		ofAddListener(ofEvents().update, this, &Module::update);
 	}
 	
+	template <typename T> Module<T>::~Module() {
+		delete this->gui;
+	}
+	
 	template <typename T> void Module<T>::add_connector(std::string tag, AeonNode::Connector::Type type) {
 		this->size_to_fit();
 		Node::add_connector(tag, type);
@@ -54,22 +58,77 @@ namespace AeonKitMapper {
 	}
 	
 	// SensorModule
-	SensorModule::SensorModule(float x, float y) : HardwareModule("SensorModule", x, y) {
+	template <typename T> SensorModule<T>::SensorModule(float x, float y) : HardwareModule<T>("SensorModule", x, y) {
 		this->gui->addButton("Send Data");
+		this->add_connector("check", AeonNode::Connector::Type::Input);
 		this->add_connector("sensor_data", AeonNode::Connector::Type::Output);
 	}
 	
-	void SensorModule::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
-		std::cerr << "Sensor module could not receive any data." << std::endl;
+	template <typename T> void SensorModule<T>::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
+		bool in = boost::any_cast<bool>(data);
+		if (in) {
+			this->eval_and_send();
+		}
+	}
+	
+	template <typename T> T SensorModule<T>::update_output_state() {
+		float result = this->eval();
+		return result;
+	}
+	
+	template <typename T> void SensorModule<T>::eval_and_send() {
+		this->send_data(this->eval());
+	}
+	
+	TiltSensor::TiltSensor(float x, float y) : SensorModule(x, y), tilt(false) {}
+	
+	bool TiltSensor::eval() {
+		return this->get_tilt_status();
+	}
+	
+	bool TiltSensor::get_tilt_status() {
+		return this->tilt;
+	}
+	
+	TouchSensor::TouchSensor(float x, float y) : SensorModule(x, y), position(0), pressure(0) {}
+	
+	float TouchSensor::eval() {
+		return this->get_position();
+	}
+	
+	void TouchSensor::eval_and_send() {
+		this->send_data(this->get_position());
+		this->send_data(this->get_pressure());
+	}
+	
+	float TouchSensor::get_position() {
+		return this->position;
+	}
+	
+	float TouchSensor::get_pressure() {
+		return this->pressure;
+	}
+	
+	DepthSensor::DepthSensor(float x, float y) : SensorModule(x, y), depth(0) {
+		ofxDatGuiSlider *depth_slider = this->gui->addSlider("depth", 0, 255);
+		depth_slider->bind(&this->depth, 0, 255);
+	}
+	
+	float DepthSensor::eval() {
+		return this->get_depth();
+	}
+	
+	float DepthSensor::get_depth() {
+		return this->depth;
 	}
 	
 	// DisplayModule
-	DisplayModule::DisplayModule(float x, float y) : HardwareModule("DisplayModule", x, y) {
+	template <typename T> DisplayModule<T>::DisplayModule(float x, float y) : HardwareModule<T>("DisplayModule", x, y) {
 		this->add_connector("display_data", AeonNode::Connector::Type::Input);
 		this->size_to_fit();
 	}
 	
-	void DisplayModule::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
+	template <typename T> void DisplayModule<T>::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
 		
 	}
 	
@@ -77,17 +136,21 @@ namespace AeonKitMapper {
 		this->module_name = "haptic display";
 	}
 	
-	
 	// Logic
 	LogicModule::LogicModule(std::string module_name, float x, float y) : Module(module_name, x, y) {}
 	
 	void LogicModule::clear_input_state() {
 		for (int i = 0; i < this->input_connector.size(); i++) {
 			auto c = this->input_connector[i];
-			std::get<0>(this->connector_state[c]) = false;
+			auto toggle = this->connector_state[c];
+			toggle->setEnabled(false);
 		}
 	}
 	
+	void LogicModule::onToggleEvent(ofxDatGuiButtonEvent e) {
+		this->eval_and_send();
+	}
+
 	void LogicModule::add_connector(std::string tag, AeonNode::Connector::Type type) {
 		Module::add_connector(tag, type);
 		auto toggle = this->gui->addToggle(tag);
@@ -98,15 +161,14 @@ namespace AeonKitMapper {
 		else {
 			c = this->output_connector.back();
 		}
-		this->connector_state[c] = std::make_tuple(false, toggle);
+		toggle->onButtonEvent(this, &LogicModule::onToggleEvent);
+		this->connector_state[c] = toggle;
 	}
 	
 	void LogicModule::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
-		auto t = this->connector_state[connector];
+		auto toggle = this->connector_state[connector];
 		bool in = boost::any_cast<bool>(data);
-		auto toggle = std::get<1>(t);
 		toggle->setEnabled(in);
-		this->connector_state[connector] = std::make_tuple(in, toggle);
 		this->eval_and_send();
 	}
 	
@@ -116,8 +178,7 @@ namespace AeonKitMapper {
 	
 	bool LogicModule::update_output_state() {
 		bool result = this->eval();
-		auto t = this->connector_state[this->output_connector[0]];
-		auto toggle = std::get<1>(t);
+		auto toggle = this->connector_state[this->output_connector[0]];
 		toggle->setEnabled(result);
 		return result;
 	}
@@ -126,7 +187,6 @@ namespace AeonKitMapper {
 		this->add_connector("in1", AeonNode::Connector::Type::Input);
 		this->add_connector("in2", AeonNode::Connector::Type::Input);
 		this->add_connector("out", AeonNode::Connector::Type::Output);
-		this->size_to_fit();
 		this->clear_input_state();
 	}
 	
@@ -134,7 +194,8 @@ namespace AeonKitMapper {
 		bool result = true;
 		for (int i = 0; i < this->input_connector.size(); i++) {
 			auto c = this->input_connector[i];
-			result &= std::get<0>(this->connector_state[c]);
+			auto toggle = this->connector_state[c];
+			result &= toggle->getEnabled();
 		}
 		
 		return result;
@@ -144,14 +205,14 @@ namespace AeonKitMapper {
 		this->add_connector("in1", AeonNode::Connector::Type::Input);
 		this->add_connector("in2", AeonNode::Connector::Type::Input);
 		this->add_connector("out", AeonNode::Connector::Type::Output);
-		this->size_to_fit();
 	}
 	
 	bool LogicORModule::eval() {
 		bool result = false;
 		for (int i = 0; i < this->input_connector.size(); i++) {
 			auto c = this->input_connector[i];
-			result |= std::get<0>(this->connector_state[c]);
+			auto toggle = this->connector_state[c];
+			result |= toggle->getEnabled();
 		}
 		
 		return result;
@@ -160,14 +221,14 @@ namespace AeonKitMapper {
 	LogicXORModule::LogicXORModule(float x, float y) : LogicModule("XOR", x, y) {
 		this->add_connector("in", AeonNode::Connector::Type::Input);
 		this->add_connector("out", AeonNode::Connector::Type::Output);
-		this->size_to_fit();
 	}
 	
 	bool LogicXORModule::eval() {
 		bool result = false;
 		for (int i = 0; i < this->input_connector.size(); i++) {
 			auto c = this->input_connector[i];
-			result ^= std::get<0>(this->connector_state[c]);
+			auto toggle = this->connector_state[c];
+			result ^= toggle->getEnabled();
 		}
 		
 		return result;
@@ -176,46 +237,32 @@ namespace AeonKitMapper {
 	LogicNOTModule::LogicNOTModule(float x, float y) : LogicModule("NOT", x, y) {
 		this->add_connector("in", AeonNode::Connector::Type::Input);
 		this->add_connector("out", AeonNode::Connector::Type::Output);
-		this->size_to_fit();
 	}
 	
 	bool LogicNOTModule::eval() {
 		bool result = false;
 		for (int i = 0; i < this->input_connector.size(); i++) {
 			auto c = this->input_connector[i];
-			result = !std::get<0>(this->connector_state[c]);
+			auto toggle = this->connector_state[c];
+			result = !toggle->getEnabled();
 		}
 		
 		return result;
 	}
 	
-	LogicTrueModule::LogicTrueModule(float x, float y) : LogicModule("True", x, y) {
+	LogicBooleanModule::LogicBooleanModule(float x, float y) : LogicModule("BOOL", x, y) {
 		this->add_connector("out", AeonNode::Connector::Type::Output);
 		auto button = this->gui->addButton("Eval");
-		button->onButtonEvent(this, &LogicTrueModule::onButtonEvent);
-		this->size_to_fit();
+		button->onButtonEvent(this, &LogicBooleanModule::onButtonEvent);
 	}
 	
-	bool LogicTrueModule::eval() {
-		return true;
+	bool LogicBooleanModule::eval() {
+		auto it = this->connector_state.begin();
+		auto toggle = it->second;
+		return toggle->getEnabled();
 	}
 	
-	void LogicTrueModule::onButtonEvent(ofxDatGuiButtonEvent e) {
-		this->eval_and_send();
-	}
-	
-	LogicFalseModule::LogicFalseModule(float x, float y) : LogicModule("False", x, y) {
-		this->add_connector("out", AeonNode::Connector::Type::Output);
-		auto button = this->gui->addButton("Eval");
-		button->onButtonEvent(this, &LogicFalseModule::onButtonEvent);
-		this->size_to_fit();
-	}
-	
-	bool LogicFalseModule::eval() {
-		return false;
-	}
-	
-	void LogicFalseModule::onButtonEvent(ofxDatGuiButtonEvent e) {
+	void LogicBooleanModule::onButtonEvent(ofxDatGuiButtonEvent e) {
 		this->eval_and_send();
 	}
 	

@@ -16,15 +16,18 @@ void ofApp::setup(){
 	this->components.push_back(component);
 
 	this->view.frame = ofxHierarchy::Rect({0, 0, (float)ofGetWidth(), (float)ofGetHeight()});
-	auto not_module = new AeonKitMapper::LogicNOTModule(200, 0);
+	
+	auto depth_sensor = new AeonKitMapper::DepthSensor(400, 100);
+	this->view.add_subview(depth_sensor);
+	auto not_module = new AeonKitMapper::LogicNOTModule(400, 250);
 	this->view.add_subview(not_module);
-	auto counter_module = new AeonKitMapper::CounterModule(100, 0);
+	auto counter_module = new AeonKitMapper::CounterModule(400, 400);
 	this->view.add_subview(counter_module);
-	auto true_module = new AeonKitMapper::LogicTrueModule(100, 100);
+	auto true_module = new AeonKitMapper::LogicBooleanModule(100, 100);
 	this->view.add_subview(true_module);
-	auto true_module2 = new AeonKitMapper::LogicTrueModule(100, 200);
+	auto true_module2 = new AeonKitMapper::LogicBooleanModule(100, 200);
 	this->view.add_subview(true_module2);
-	auto false_module = new AeonKitMapper::LogicFalseModule(100, 300);
+	auto false_module = new AeonKitMapper::LogicBooleanModule(100, 300);
 	this->view.add_subview(false_module);
 	auto and_module = new AeonKitMapper::LogicANDModule(100, 400);
 	this->view.add_subview(and_module);

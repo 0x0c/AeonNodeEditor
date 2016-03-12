@@ -93,13 +93,8 @@ namespace AeonNode {
 	
 	void Node::add_connector(std::string tag, Connector::Type type) {
 		std::vector<Connector *> *connector = type == Connector::Type::Output ? &this->output_connector : &this->input_connector;
-		auto c = this->add_connector(type, tag, connector);
-		if (type == Connector::Type::Input) {
-			c->setCenter(this->frame.origin.x - 10, this->frame.origin.y + ConnectorMargin);
-		}
-		else {
-			c->setCenter(this->frame.origin.x + this->frame.size.width + 10, this->frame.origin.y + ConnectorMargin);
-		}
+		this->add_connector(type, tag, connector);
+		this->size_to_fit();
 	}
 	
 	void Node::send_data(boost::any data) {

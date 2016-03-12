@@ -19,10 +19,15 @@ namespace AeonNode {
 	
 	void Connector::onConnecterPressed(ofMouseEventArgs& mouseArgs) {
 		ofPoint p(mouseArgs.x, mouseArgs.y);
-		if (this->type == Connector::Output && this->hitTest(p.x, p.y)) {
-			this->selected = true;
-			p.x += 10;
-			this->drag_point = p;
+		if (this->hitTest(p.x, p.y)) {
+			if (this->type == Connector::Output) {
+				this->selected = true;
+				p.x += 10;
+				this->drag_point = p;
+			}
+			else {
+				this->disconnect();
+			}
 		}
 	}
 	
@@ -42,8 +47,8 @@ namespace AeonNode {
 		}
 	}
 	
-	Node* Connector::get_parent() {
-		return this->parent;
+	Node* Connector::get_parent_node() {
+		return this->parent_node;
 	}
 	
 	void Connector::send_data(Node *from, boost::any data) {
@@ -54,17 +59,22 @@ namespace AeonNode {
 	}
 	
 	void Connector::received_data(Node *from, boost::any data) {
-		this->parent->received_data(from, this, data);
+		this->parent_node->received_data(from, this, data);
 	}
 	
 	void Connector::connect(Connector *connector) {
 		if (this->type != connector->type) {
+			connector->parent_connector = this;
 			this->connected_connector.push_back(connector);
 		}
 	}
 	
 	void Connector::disconnect(Connector *connector) {
-		this->connected_connector.erase(std::remove(this->connected_connector.begin(), this->connected_connector.end(), connector), this->connected_connector.end());
+		if (connector == nullptr) {
+			connector = this->parent_connector;
+		}
+		connector->connected_connector.erase(std::remove(connector->connected_connector.begin(), connector->connected_connector.end(), this), connector->connected_connector.end());
+		this->parent_connector = nullptr;
 	}
 	
 	void Connector::draw() {
@@ -112,7 +122,7 @@ namespace AeonNode {
 		this->label_font.drawString(this->tag, this->frame.origin.x, this->center().y - 10);
 	}
 	
-	Connector::Connector(Node *parent, Connector::Type type) : parent(parent), type(type) {
+	Connector::Connector(Node *parent_node, Connector::Type type) : parent_node(parent_node), type(type) {
 		this->frame.size.width = 14;
 		this->frame.size.height = 14;
 		this->label_font.load("arial.ttf", 8);
@@ -120,7 +130,7 @@ namespace AeonNode {
 			auto p = std::get<0>(t);
 			auto c = std::get<1>(t);
 			if (this != c) {
-				if (this->parent != c->get_parent() && this->hitTest(p.x, p.y)) {
+				if (this->parent_node != c->get_parent_node() && this->hitTest(p.x, p.y)) {
 					c->connect(this);
 				}
 			}
