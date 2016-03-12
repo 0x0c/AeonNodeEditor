@@ -13,7 +13,8 @@
 
 namespace AeonKitMapper {
 	class ModuleExporter {
-		static void export_module_relation(std::vector<AeonNode::Node> module);
+	public:
+		static void export_module_relation(std::vector<AeonNode::Node *> module);
 	};
 }
 

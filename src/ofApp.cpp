@@ -1,5 +1,4 @@
 #include "ofApp.h"
-#include "AeonKitMapper.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -8,6 +7,9 @@ void ofApp::setup(){
 	
 	this->gui = new ofxDatGui();
 	this->gui->setWidth(200);
+	
+	auto export_button = this->gui->addButton("Export");
+	export_button->onButtonEvent(this, &ofApp::onExportButtonEvent);
 	
 	auto folder = this->gui->addFolder("Logic Modules");
 	std::vector<std::string> modules = {"Boolean", "Not", "AND", "OR", "XOR"};
@@ -18,7 +20,7 @@ void ofApp::setup(){
 	}
 	
 	folder = this->gui->addFolder("Utility Modules");
-	modules = {"Counter", "StringConverter_Int", "StringConverter_Float", "StringConverter_Bool"};
+	modules = {"HapticPattern", "Counter", "Value_Int", "Value_Float", "StringConverter_Int", "StringConverter_Float", "StringConverter_Bool"};
 	for (int i = 0; i < modules.size(); i++) {
 		auto button = folder->addButton(modules[i]);
 		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
@@ -118,6 +120,10 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
+void ofApp::onExportButtonEvent(ofxDatGuiButtonEvent e) {
+	AeonKitMapper::ModuleExporter::export_module_relation(this->modules);
+}
+
 float offset = 250;
 void ofApp::onAddModuleButtonEvent(ofxDatGuiButtonEvent e) {
 	AeonNode::Node *node = nullptr;
@@ -137,11 +143,20 @@ void ofApp::onAddModuleButtonEvent(ofxDatGuiButtonEvent e) {
 	else if (label == "XOR") {
 		node = new AeonKitMapper::LogicXORModule(offset, offset);
 	}
+	else if (label == "HAPTICPATTERN") {
+		node = new AeonKitMapper::HapticPatternGeneratorModule(offset, offset);
+	}
 	else if (label == "COUNTER") {
 		node = new AeonKitMapper::CounterModule(offset, offset);
 	}
 	else if (label == "STRINGCONVERTER_INT") {
 		node = new AeonKitMapper::StringConverterModule<int>(offset, offset);
+	}
+	else if (label == "VALUE_INT") {
+		node = new AeonKitMapper::ValueModule<int>(offset, offset);
+	}
+	else if (label == "VALUE_FLOAT") {
+		node = new AeonKitMapper::ValueModule<float>(offset, offset);
 	}
 	else if (label == "STRINGCONVERTER_FLOAT") {
 		node = new AeonKitMapper::StringConverterModule<float>(offset, offset);
@@ -175,6 +190,7 @@ void ofApp::onAddModuleButtonEvent(ofxDatGuiButtonEvent e) {
 	}
 	
 	if (node != nullptr) {
+		this->modules.push_back(node);
 		this->view.add_subview(node);
 		offset = node->getMaxY();
 	}

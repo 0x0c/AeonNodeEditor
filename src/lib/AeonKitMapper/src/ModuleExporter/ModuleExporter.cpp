@@ -12,7 +12,9 @@
 #include "ujson.hpp"
 
 namespace AeonKitMapper {
-	void ModuleExporter::export_module_relation(std::vector<AeonNode::Node> module) {
-		
+	void ModuleExporter::export_module_relation(std::vector<AeonNode::Node *> module) {
+		for (int i = 0; i < module.size(); i++) {
+			
+		}
 	}
 }

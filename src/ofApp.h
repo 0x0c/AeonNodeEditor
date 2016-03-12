@@ -4,9 +4,11 @@
 #include "ofMain.h"
 #include "ofxDatGui.h"
 #include "ofxHierarchy.h"
+#include "AeonKitMapper.hpp"
 
 class ofApp : public ofBaseApp{
 public:
+	std::vector<AeonNode::Node *> modules;
 	ofxHierarchy::View view;
 	ofxDatGui *gui;
 	
@@ -25,5 +27,6 @@ public:
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 	
+	void onExportButtonEvent(ofxDatGuiButtonEvent e);
 	void onAddModuleButtonEvent(ofxDatGuiButtonEvent e);
 };
