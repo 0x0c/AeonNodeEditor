@@ -9,41 +9,9 @@
 #include "../ConditionModule.hpp"
 
 namespace AeonKitMapper {
-	template <typename T> std::string ConditionModule<T>::comparison_type_text(ComparisonType type) {
-		std::string result = "";
-		switch (type) {
-			case Equal: {
-				result = "== : Equal";
-			}
-				break;
-			case NotEqual: {
-				result = "!= : NotEqual";
-			}
-				break;
-			case Grater: {
-				result = "> : Grater";
-			}
-				break;
-			case GraterThan: {
-				result = ">= : GraterThan";
-			}
-				break;
-			case Less: {
-				result = "< : Less";
-			}
-				break;
-			case LessThan: {
-				result = "<= : LessThan";
-			}
-				break;
-		}
-		
-		return result;
-	}
-	
 	template <typename T> void ConditionModule<T>::onButtonEvent(ofxDatGuiButtonEvent e) {
 		this->switch_comparison_type();
-		this->comparison_type_button->setLabel(this->comparison_type_text(this->type));
+		this->comparison_type_button->setLabel(AeonKitMapper::ConditionModule<T>::comparison_type_text(this->type));
 		this->eval_and_send();
 	}
 	

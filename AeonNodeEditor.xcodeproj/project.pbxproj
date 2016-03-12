@@ -193,11 +193,11 @@
 		29D38AEBCD5EB6CB70952E0E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				7C6F90530F65324BDE40FE0D /* detail */,
 				B3B75549B5E0901365B9F278 /* Utility */,
 				FDD498D9276DFBE3DB7C6E37 /* Condition */,
 				0C0D632E522C1189318A972A /* Hardware */,
 				420CF6183EDE5F3631887241 /* Logic */,
+				7C6F90530F65324BDE40FE0D /* detail */,
 				B7D8BEAA531A329847B85672 /* Module.cpp */,
 				66419C72C9E4F738804E17A4 /* Module.hpp */,
 			);

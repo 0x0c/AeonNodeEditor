@@ -22,6 +22,39 @@ namespace AeonKitMapper {
 	
 	class HapticDisplay : public DisplayModule<int> {
 	public:
+		typedef enum {
+			SingleTap,
+			DoubleTap,
+			ShortDuration,
+			LongDuration
+		} HapticPattern;
+	private:
+		ofxDatGuiLabel *pattern_text_label;
+		
+		static std::string pattern_text(HapticPattern pattern) {
+			std::string result = "";
+			switch (pattern) {
+				case SingleTap: {
+					result = "SingleTap";
+				}
+					break;
+				case DoubleTap: {
+					result = "DoubleTap";
+				}
+					break;
+				case ShortDuration: {
+					result = "ShortDuration";
+				}
+					break;
+				case LongDuration: {
+					result = "LongDuration";
+				}
+					break;
+			}
+			
+			return result;
+		}
+	public:
 		HapticDisplay(float x, float y);
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
 		virtual int eval() { return 0; };

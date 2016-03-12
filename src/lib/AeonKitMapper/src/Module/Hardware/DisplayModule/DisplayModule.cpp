@@ -11,6 +11,12 @@
 namespace AeonKitMapper {
 	HapticDisplay::HapticDisplay(float x, float y) : DisplayModule("HapticDisplay", x, y) {
 		this->add_connector("pattern", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Input);
+		this->pattern_text_label = this->gui->addLabel("");
+	}
+	
+	void HapticDisplay::received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
+		int pattern = boost::any_cast<int>(data);
+		this->pattern_text_label->setLabel(HapticDisplay::pattern_text((HapticPattern)pattern));
 	}
 	
 	OLEDDisplay::OLEDDisplay(float x, float y) : DisplayModule("OLEDDisplay", x, y) {

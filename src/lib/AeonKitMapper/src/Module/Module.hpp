@@ -14,6 +14,7 @@
 #include "ofEventUtils.h"
 #include "ofxDatGui.h"
 #include "../../../AeonNode/src/Node.hpp"
+#include "thunderclap.h"
 
 namespace AeonKitMapper {
 	template <typename T> class Module : public AeonNode::Node {

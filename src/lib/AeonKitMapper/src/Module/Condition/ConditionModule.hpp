@@ -26,7 +26,37 @@ namespace AeonKitMapper {
 		T in1;
 		T in2;
 		ofxDatGuiButton *comparison_type_button;
-		std::string comparison_type_text(ComparisonType type);
+		static std::string comparison_type_text(ComparisonType type) {
+			std::string result = "";
+			switch (type) {
+				case Equal: {
+					result = "== : Equal";
+				}
+					break;
+				case NotEqual: {
+					result = "!= : NotEqual";
+				}
+					break;
+				case Grater: {
+					result = "> : Grater";
+				}
+					break;
+				case GraterThan: {
+					result = ">= : GraterThan";
+				}
+					break;
+				case Less: {
+					result = "< : Less";
+				}
+					break;
+				case LessThan: {
+					result = "<= : LessThan";
+				}
+					break;
+			}
+			
+			return result;
+		}
 		void onButtonEvent(ofxDatGuiButtonEvent e);
 	public:
 		ConditionModule(float x, float y);

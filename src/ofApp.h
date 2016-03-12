@@ -23,5 +23,7 @@ public:
 	void mouseExited(int x, int y);
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
-	void gotMessage(ofMessage msg);	
+	void gotMessage(ofMessage msg);
+	
+	void onAddModuleButtonEvent(ofxDatGuiButtonEvent e);
 };

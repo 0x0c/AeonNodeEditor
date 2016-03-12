@@ -7,43 +7,47 @@ void ofApp::setup(){
 	this->view.frame = ofxHierarchy::Rect({0, 0, (float)ofGetWidth(), (float)ofGetHeight()});
 	
 	this->gui = new ofxDatGui();
-//	this->gui->addLabel("label");
+	this->gui->setWidth(200);
 	
-	auto true_module = new AeonKitMapper::LogicBooleanModule(100, 100);
-	this->view.add_subview(true_module);
-	auto true_module2 = new AeonKitMapper::LogicBooleanModule(100, true_module->frame.origin.y + true_module->frame.size.height + 100);
-	this->view.add_subview(true_module2);
-	auto not_module = new AeonKitMapper::LogicNOTModule(100, true_module2->frame.origin.y + true_module2->frame.size.height + 100);
-	this->view.add_subview(not_module);
-	true_module = new AeonKitMapper::LogicBooleanModule(100, not_module->frame.origin.y + not_module->frame.size.height + 100);
-	this->view.add_subview(true_module);
-	auto and_module = new AeonKitMapper::LogicANDModule(100, true_module->frame.origin.y + true_module->frame.size.height + 100);
-	this->view.add_subview(and_module);
+	auto folder = this->gui->addFolder("Logic Modules");
+	std::vector<std::string> modules = {"Boolean", "Not", "AND", "OR", "XOR"};
+	for (int i = 0; i < modules.size(); i++) {
+		auto button = folder->addButton(modules[i]);
+		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
+		button->setTheme(new ofxDatGuiThemeAqua());
+	}
 	
-	auto string_converter_module = new AeonKitMapper::StringConverterModule<int>(300, 80);
-	this->view.add_subview(string_converter_module);
-	auto float_string_converter_module = new AeonKitMapper::StringConverterModule<float>(300, string_converter_module->frame.origin.y + string_converter_module->frame.size.height + 80);
-	this->view.add_subview(float_string_converter_module);
-	auto counter_module = new AeonKitMapper::CounterModule(300, float_string_converter_module->frame.origin.y + float_string_converter_module->frame.size.height + 80);
-	this->view.add_subview(counter_module);
-	auto counter_module2 = new AeonKitMapper::CounterModule(300, counter_module->frame.origin.y + counter_module->frame.size.height + 80);
-	this->view.add_subview(counter_module2);
+	folder = this->gui->addFolder("Utility Modules");
+	modules = {"Counter", "StringConverter_Int", "StringConverter_Float", "StringConverter_Bool"};
+	for (int i = 0; i < modules.size(); i++) {
+		auto button = folder->addButton(modules[i]);
+		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
+		button->setTheme(new ofxDatGuiThemeAqua());
+	}
 	
-	auto condition_module = new AeonKitMapper::ConditionModule<int>(500, 80);
-	this->view.add_subview(condition_module);
-	auto float_condition_module = new AeonKitMapper::ConditionModule<float>(500, condition_module->frame.origin.y + condition_module->frame.size.height + 80);
-	this->view.add_subview(float_condition_module);
+	folder = this->gui->addFolder("Condition Modules");
+	modules = {"Condition_Int", "Condition_Float", "Condition_Bool"};
+	for (int i = 0; i < modules.size(); i++) {
+		auto button = folder->addButton(modules[i]);
+		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
+		button->setTheme(new ofxDatGuiThemeAqua());
+	}
 	
-	auto touch_sensor = new AeonKitMapper::TouchSensor(700, 80);
-	this->view.add_subview(touch_sensor);
-	auto depth_sensor = new AeonKitMapper::DepthSensor(700, touch_sensor->frame.origin.y + touch_sensor->frame.size.height + 80);
-	this->view.add_subview(depth_sensor);
-	auto oled_display = new AeonKitMapper::OLEDDisplay(700, depth_sensor->frame.origin.y + depth_sensor->frame.size.height + 80);
-	this->view.add_subview(oled_display);
-	auto oled_display2 = new AeonKitMapper::OLEDDisplay(700, oled_display->frame.origin.y + oled_display->frame.size.height + 80);
-	this->view.add_subview(oled_display2);
-	auto tilt_sensor = new AeonKitMapper::TiltSensor(700, oled_display2->frame.origin.y + oled_display2->frame.size.height + 80);
-	this->view.add_subview(tilt_sensor);
+	folder = this->gui->addFolder("Display Modules");
+	modules = {"OLED", "Haptic"};
+	for (int i = 0; i < modules.size(); i++) {
+		auto button = folder->addButton(modules[i]);
+		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
+		button->setTheme(new ofxDatGuiThemeAqua());
+	}
+
+	folder = this->gui->addFolder("Sensor Modules");
+	modules = {"Depth", "Tilt", "Touch"};
+	for (int i = 0; i < modules.size(); i++) {
+		auto button = folder->addButton(modules[i]);
+		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
+		button->setTheme(new ofxDatGuiThemeAqua());
+	}
 }
 
 //--------------------------------------------------------------
@@ -59,7 +63,9 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+	if (key == 'f') {
+		ofToggleFullscreen();
+	}
 }
 
 //--------------------------------------------------------------
@@ -110,4 +116,66 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+float offset = 250;
+void ofApp::onAddModuleButtonEvent(ofxDatGuiButtonEvent e) {
+	AeonNode::Node *node = nullptr;
+	std::string label = e.target->getLabel();
+	if (label == "BOOLEAN") {
+		node = new AeonKitMapper::LogicBooleanModule(offset, offset);
+	}
+	else if (label == "NOT") {
+		node = new AeonKitMapper::LogicNOTModule(offset, offset);
+	}
+	else if (label == "AND") {
+		node = new AeonKitMapper::LogicANDModule(offset, offset);
+	}
+	else if (label == "OR") {
+		node = new AeonKitMapper::LogicORModule(offset, offset);
+	}
+	else if (label == "XOR") {
+		node = new AeonKitMapper::LogicXORModule(offset, offset);
+	}
+	else if (label == "COUNTER") {
+		node = new AeonKitMapper::CounterModule(offset, offset);
+	}
+	else if (label == "STRINGCONVERTER_INT") {
+		node = new AeonKitMapper::StringConverterModule<int>(offset, offset);
+	}
+	else if (label == "STRINGCONVERTER_FLOAT") {
+		node = new AeonKitMapper::StringConverterModule<float>(offset, offset);
+	}
+	else if (label == "STRINGCONVERTER_BOOL") {
+		node = new AeonKitMapper::StringConverterModule<bool>(offset, offset);
+	}
+	else if (label == "CONDITION_INT") {
+		node = new AeonKitMapper::ConditionModule<int>(offset, offset);
+	}
+	else if (label == "CONDITION_FLOAT") {
+		node = new AeonKitMapper::ConditionModule<float>(offset, offset);
+	}
+	else if (label == "CONDITION_BOOL") {
+		node = new AeonKitMapper::ConditionModule<bool>(offset, offset);
+	}
+	else if (label == "OLED") {
+		node = new AeonKitMapper::OLEDDisplay(offset, offset);
+	}
+	else if (label == "HAPTIC") {
+		node = new AeonKitMapper::HapticDisplay(offset, offset);
+	}
+	else if (label == "DEPTH") {
+		node = new AeonKitMapper::DepthSensor(offset, offset);
+	}
+	else if (label == "TILT") {
+		node = new AeonKitMapper::TiltSensor(offset, offset);
+	}
+	else if (label == "TOUCH") {
+		node = new AeonKitMapper::TouchSensor(offset, offset);
+	}
+	
+	if (node != nullptr) {
+		this->view.add_subview(node);
+		offset = node->getMaxY();
+	}
 }

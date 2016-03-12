@@ -91,7 +91,8 @@ namespace AeonKitMapper {
 	}
 	
 	LogicXORModule::LogicXORModule(float x, float y) : LogicModule("XOR", x, y) {
-		this->add_connector("in", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
+		this->add_connector("in1", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
+		this->add_connector("in2", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 	}
 	
