@@ -94,7 +94,7 @@ namespace AeonNode {
 			result = true;
 			connector->parent_connector = this;
 			this->connected_connector.push_back(connector);
-			this->parent_node->connected(connector);
+			connector->parent_node->connected(this);
 		}
 		
 		return result;

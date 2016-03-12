@@ -32,10 +32,10 @@ namespace AeonKitMapper {
 		ConditionModule(float x, float y);
 		ComparisonType type;
 		void switch_comparison_type();
-		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
-		virtual bool eval();
-		virtual void eval_and_send();
-		virtual bool update_output_state();
+		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) override;
+		virtual bool eval() override;
+		virtual void eval_and_send() override;
+		virtual bool update_output_state() override;
 	};
 }
 

@@ -16,11 +16,14 @@ namespace AeonKitMapper {
 		ofxDatGuiLabel *input_number_label;
 		T input_number;
 	public:
+		virtual void connected(AeonNode::Connector *to) override {
+			this->eval_and_send();
+		}
 		StringConverterModule(float x, float y);
-		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
-		virtual std::string eval();
-		virtual void eval_and_send();
-		virtual std::string update_output_state();
+		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) override;
+		virtual std::string eval() override;
+		virtual void eval_and_send() override;
+		virtual std::string update_output_state() override;
 	};
 }
 

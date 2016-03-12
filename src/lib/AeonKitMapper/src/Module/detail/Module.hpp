@@ -16,6 +16,7 @@ namespace AeonKitMapper {
 			this->gui->setPosition(this->frame.origin.x, this->frame.origin.y);
 		}
 	}
+	
 	template <typename T> void Module<T>::size_to_fit() {
 		Node::size_to_fit();
 		this->frame.size.height = this->gui->getHeight() - 3;
@@ -43,7 +44,7 @@ namespace AeonKitMapper {
 		
 		ofAddListener(ofEvents().update, this, &Module::update);
 	}
-		
+	
 	template <typename T> Module<T>::~Module() {
 		delete this->gui;
 	}

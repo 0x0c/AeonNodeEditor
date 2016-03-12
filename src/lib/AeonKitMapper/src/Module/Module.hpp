@@ -22,11 +22,10 @@ namespace AeonKitMapper {
 		std::string module_name;
 		
 		virtual void onMouseDragged(ofMouseEventArgs& mouseArgs) override;
+	public:
 		virtual void connected(AeonNode::Connector *to) override {
 			this->eval_and_send();
 		}
-		
-	public:
 		virtual void size_to_fit() override;
 		std::string get_module_name();
 		void update(ofEventArgs &args);

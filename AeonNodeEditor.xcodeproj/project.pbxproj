@@ -153,10 +153,10 @@
 		0C0D632E522C1189318A972A /* Hardware */ = {
 			isa = PBXGroup;
 			children = (
+				BEEAAB4048F60DE071D6E1C1 /* SensorModule */,
 				68B46786950008BC11C358D6 /* DisplayModule */,
 				8C7E464565E686082F260FB8 /* HardwareModule.cpp */,
 				D4621EA7B4F163D9E7F4033A /* HardwareModule.hpp */,
-				BEEAAB4048F60DE071D6E1C1 /* SensorModule */,
 			);
 			name = Hardware;
 			sourceTree = "<group>";
@@ -193,13 +193,13 @@
 		29D38AEBCD5EB6CB70952E0E /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				FDD498D9276DFBE3DB7C6E37 /* Condition */,
 				7C6F90530F65324BDE40FE0D /* detail */,
+				B3B75549B5E0901365B9F278 /* Utility */,
+				FDD498D9276DFBE3DB7C6E37 /* Condition */,
 				0C0D632E522C1189318A972A /* Hardware */,
 				420CF6183EDE5F3631887241 /* Logic */,
 				B7D8BEAA531A329847B85672 /* Module.cpp */,
 				66419C72C9E4F738804E17A4 /* Module.hpp */,
-				B3B75549B5E0901365B9F278 /* Utility */,
 			);
 			name = Module;
 			sourceTree = "<group>";

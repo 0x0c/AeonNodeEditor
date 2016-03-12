@@ -18,10 +18,10 @@ namespace AeonKitMapper {
 		ofxDatGuiLabel *counter_label;
 	public:
 		CounterModule(float x, float y);
-		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data);
-		virtual int eval();
-		virtual void eval_and_send();
-		virtual int update_output_state();
+		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) override;
+		virtual int eval() override;
+		virtual void eval_and_send() override;
+		virtual int update_output_state() override;
 		void increment();
 		void decrement();
 	};

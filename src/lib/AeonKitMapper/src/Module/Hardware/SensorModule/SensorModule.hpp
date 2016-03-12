@@ -32,6 +32,7 @@ namespace AeonKitMapper {
 	class TiltSensor : public SensorModule<bool> {
 	private:
 		bool tilt;
+		void onButtonEvent(ofxDatGuiButtonEvent e);
 	public:
 		TiltSensor(float x, float y);
 		virtual bool eval();

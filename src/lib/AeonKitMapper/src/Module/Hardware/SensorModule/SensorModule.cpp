@@ -11,7 +11,11 @@
 #include <string>
 
 namespace AeonKitMapper {
-	TiltSensor::TiltSensor(float x, float y) : SensorModule("Tilt", x, y), tilt(false) {}
+	TiltSensor::TiltSensor(float x, float y) : SensorModule("Tilt", x, y), tilt(false) {
+		this->add_connector("tilt", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		auto button = this->gui->addButton("tilt");
+		button->onButtonEvent(this, &TiltSensor::onButtonEvent);
+	}
 	
 	bool TiltSensor::eval() {
 		return this->get_tilt_status();
@@ -27,6 +31,12 @@ namespace AeonKitMapper {
 	
 	bool TiltSensor::get_tilt_status() {
 		return this->tilt;
+	}
+	
+	void TiltSensor::onButtonEvent(ofxDatGuiButtonEvent e) {
+		this->tilt = true;
+		this->eval_and_send();
+		this->tilt = false;
 	}
 	
 	TouchSensor::TouchSensor(float x, float y) : SensorModule("Touch", x, y), position(0), pressure(0) {

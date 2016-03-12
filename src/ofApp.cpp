@@ -20,28 +20,30 @@ void ofApp::setup(){
 	auto and_module = new AeonKitMapper::LogicANDModule(100, true_module->frame.origin.y + true_module->frame.size.height + 100);
 	this->view.add_subview(and_module);
 	
-	auto string_converter_module = new AeonKitMapper::StringConverterModule<int>(300, 100);
+	auto string_converter_module = new AeonKitMapper::StringConverterModule<int>(300, 80);
 	this->view.add_subview(string_converter_module);
-	auto float_string_converter_module = new AeonKitMapper::StringConverterModule<float>(300, string_converter_module->frame.origin.y + string_converter_module->frame.size.height + 100);
+	auto float_string_converter_module = new AeonKitMapper::StringConverterModule<float>(300, string_converter_module->frame.origin.y + string_converter_module->frame.size.height + 80);
 	this->view.add_subview(float_string_converter_module);
-	auto counter_module = new AeonKitMapper::CounterModule(300, float_string_converter_module->frame.origin.y + float_string_converter_module->frame.size.height + 100);
+	auto counter_module = new AeonKitMapper::CounterModule(300, float_string_converter_module->frame.origin.y + float_string_converter_module->frame.size.height + 80);
 	this->view.add_subview(counter_module);
-	auto counter_module2 = new AeonKitMapper::CounterModule(300, counter_module->frame.origin.y + counter_module->frame.size.height + 100);
+	auto counter_module2 = new AeonKitMapper::CounterModule(300, counter_module->frame.origin.y + counter_module->frame.size.height + 80);
 	this->view.add_subview(counter_module2);
 	
-	auto condition_module = new AeonKitMapper::ConditionModule<int>(500, 100);
+	auto condition_module = new AeonKitMapper::ConditionModule<int>(500, 80);
 	this->view.add_subview(condition_module);
-	auto float_condition_module = new AeonKitMapper::ConditionModule<float>(500, condition_module->frame.origin.y + condition_module->frame.size.height + 50);
+	auto float_condition_module = new AeonKitMapper::ConditionModule<float>(500, condition_module->frame.origin.y + condition_module->frame.size.height + 80);
 	this->view.add_subview(float_condition_module);
 	
-	auto touch_sensor = new AeonKitMapper::TouchSensor(700, 100);
+	auto touch_sensor = new AeonKitMapper::TouchSensor(700, 80);
 	this->view.add_subview(touch_sensor);
-	auto depth_sensor = new AeonKitMapper::DepthSensor(700, touch_sensor->frame.origin.y + touch_sensor->frame.size.height + 100);
+	auto depth_sensor = new AeonKitMapper::DepthSensor(700, touch_sensor->frame.origin.y + touch_sensor->frame.size.height + 80);
 	this->view.add_subview(depth_sensor);
-	auto oled_display = new AeonKitMapper::OLEDDisplay(700, depth_sensor->frame.origin.y + depth_sensor->frame.size.height + 100);
+	auto oled_display = new AeonKitMapper::OLEDDisplay(700, depth_sensor->frame.origin.y + depth_sensor->frame.size.height + 80);
 	this->view.add_subview(oled_display);
-	auto oled_display2 = new AeonKitMapper::OLEDDisplay(700, oled_display->frame.origin.y + oled_display->frame.size.height + 100);
+	auto oled_display2 = new AeonKitMapper::OLEDDisplay(700, oled_display->frame.origin.y + oled_display->frame.size.height + 80);
 	this->view.add_subview(oled_display2);
+	auto tilt_sensor = new AeonKitMapper::TiltSensor(700, oled_display2->frame.origin.y + oled_display2->frame.size.height + 80);
+	this->view.add_subview(tilt_sensor);
 }
 
 //--------------------------------------------------------------
