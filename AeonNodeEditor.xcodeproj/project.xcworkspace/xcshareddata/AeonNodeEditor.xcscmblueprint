@@ -4,15 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : 0,
+    "C7C5A3CE5C73F041BA0CBD132A893B066F4AFF47" : 0,
     "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : 0,
-    "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : 0
+    "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : 0,
+    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AC48FAAB-3011-400F-8730-6FE098CC7B0F",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CB3D1886-DB1F-4D36-8D5F-B320FD5C55AC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : "AeonNodeEditor\/src\/AeonNode\/lib\/thunderclap\/",
+    "C7C5A3CE5C73F041BA0CBD132A893B066F4AFF47" : "AeonNodeEditor\/src\/lib\/AeonKitMapper\/lib\/ujson\/",
     "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : "..\/..\/addons\/ofxDatGui",
-    "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : "AeonNodeEditor\/"
+    "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : "AeonNodeEditor\/",
+    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : "AeonNodeEditor\/src\/lib\/AeonNode\/lib\/thunderclap\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "AeonNodeEditor",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:braitsch\/ofxDatGui.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9233F0F4A2BE011BD468E5177A5AD6623263B23D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/awangk\/ujson.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C7C5A3CE5C73F041BA0CBD132A893B066F4AFF47"
     }
   ]
 }
