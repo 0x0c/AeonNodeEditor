@@ -16,12 +16,9 @@
 		E9C77E8E1C941FC8001F1DC3 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143F81C90BB2C00A0DB31 /* Connector.cpp */; };
 		E9C77E8F1C941FC8001F1DC3 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143FA1C90BB2C00A0DB31 /* Node.cpp */; };
 		E9C77EAD1C9424E8001F1DC3 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EA31C9424BE001F1DC3 /* Module.cpp */; };
-		E9C77ED31C942C3E001F1DC3 /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC21C942BF2001F1DC3 /* ConditionModule.cpp */; };
-		E9C77ED41C942C3E001F1DC3 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC61C942BF2001F1DC3 /* DisplayModule.cpp */; };
-		E9C77ED51C942C3E001F1DC3 /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC81C942BF2001F1DC3 /* HardwareModule.cpp */; };
-		E9C77ED61C942C3E001F1DC3 /* SensorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ECB1C942BF2001F1DC3 /* SensorModule.cpp */; };
-		E9C77ED71C942C3E001F1DC3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ECE1C942BF2001F1DC3 /* LogicModule.cpp */; };
-		E9C77ED81C942C3E001F1DC3 /* UtilityModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ED11C942BF2001F1DC3 /* UtilityModule.cpp */; };
+		E9C77ED91C943234001F1DC3 /* UtilityModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ED11C942BF2001F1DC3 /* UtilityModule.cpp */; };
+		E9C77EDA1C943262001F1DC3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77ECE1C942BF2001F1DC3 /* LogicModule.cpp */; };
+		E9C77EDB1C943284001F1DC3 /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9C77EC21C942BF2001F1DC3 /* ConditionModule.cpp */; };
 		F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */; };
 /* End PBXBuildFile section */
 
@@ -476,12 +473,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C77ED31C942C3E001F1DC3 /* ConditionModule.cpp in Sources */,
-				E9C77ED41C942C3E001F1DC3 /* DisplayModule.cpp in Sources */,
-				E9C77ED51C942C3E001F1DC3 /* HardwareModule.cpp in Sources */,
-				E9C77ED61C942C3E001F1DC3 /* SensorModule.cpp in Sources */,
-				E9C77ED71C942C3E001F1DC3 /* LogicModule.cpp in Sources */,
-				E9C77ED81C942C3E001F1DC3 /* UtilityModule.cpp in Sources */,
+				E9C77EDB1C943284001F1DC3 /* ConditionModule.cpp in Sources */,
+				E9C77EDA1C943262001F1DC3 /* LogicModule.cpp in Sources */,
+				E9C77ED91C943234001F1DC3 /* UtilityModule.cpp in Sources */,
 				E9C77EAD1C9424E8001F1DC3 /* Module.cpp in Sources */,
 				E9C77E8E1C941FC8001F1DC3 /* Connector.cpp in Sources */,
 				E9C77E8F1C941FC8001F1DC3 /* Node.cpp in Sources */,
