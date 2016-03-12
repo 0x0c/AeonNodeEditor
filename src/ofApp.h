@@ -1,14 +1,14 @@
 #pragma once
 
+#include <vector>
 #include "ofMain.h"
 #include "ofxDatGui.h"
 #include "ofxHierarchy.h"
 #include "AeonNode/src/Node.hpp"
 
 class ofApp : public ofBaseApp{
-	public:
+public:
 	ofxHierarchy::View view;
-	AeonNode::Node *node;
 	std::vector<ofxDatGuiComponent *> components;
 	
 	void setup();

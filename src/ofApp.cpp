@@ -1,8 +1,11 @@
 #include "ofApp.h"
+#include "AeonKitMapper/src/Module/Module.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofxDatGuiComponent* component;
+	ofSetBackgroundColor(0, 0, 0, 255);
+	
+	ofxDatGuiComponent *component;
 	component = new ofxDatGuiButton("Add Display node");
 	component->setPosition(0, 0);
 	component->setWidth(150, 150);
@@ -11,32 +14,27 @@ void ofApp::setup(){
 	component->setPosition(0, component->getHeight());
 	component->setWidth(150, 150);
 	this->components.push_back(component);
-	
-	ofSetBackgroundColor(0, 0, 0, 255);
-	this->node = new AeonNode::Node({50, 50, 50, 30});
-	this->node->color = ofColor::green;
-	this->node->add_connector("out", AeonNode::Connector::Type::Output);
-	
-	auto node2 = new AeonNode::Node({100, 200, 50, 30});
-	node2->color = ofColor::red;
-	node2->add_connector("in", AeonNode::Connector::Type::Input);
-	node2->add_connector("out", AeonNode::Connector::Type::Output);
-//	this->node->tag_for_connector("out", AeonNode::Connector::Type::Output)->connect(node2->tag_for_connector("in", AeonNode::Connector::Type::Input));
-	
-	auto node3 = new AeonNode::Node({100, 300, 50, 30});
-	node3->add_connector("in", AeonNode::Connector::Type::Input);
-//	this->node->tag_for_connector("out", AeonNode::Connector::Type::Output)->connect(node3->tag_for_connector("in", AeonNode::Connector::Type::Input));
-//	node2->tag_for_connector("out", AeonNode::Connector::Type::Output)->connect(node3->tag_for_connector("in", AeonNode::Connector::Type::Input));
-	
-	this->view.add_subview(this->node);
-	this->view.add_subview(node2);
-	this->view.add_subview(node3);
+
 	this->view.frame = ofxHierarchy::Rect({0, 0, (float)ofGetWidth(), (float)ofGetHeight()});
+	auto not_module = new AeonKitMapper::LogicNOTModule(200, 0);
+	this->view.add_subview(not_module);
+	auto counter_module = new AeonKitMapper::CounterModule(100, 0);
+	this->view.add_subview(counter_module);
+	auto true_module = new AeonKitMapper::LogicTrueModule(100, 100);
+	this->view.add_subview(true_module);
+	auto true_module2 = new AeonKitMapper::LogicTrueModule(100, 200);
+	this->view.add_subview(true_module2);
+	auto false_module = new AeonKitMapper::LogicFalseModule(100, 300);
+	this->view.add_subview(false_module);
+	auto and_module = new AeonKitMapper::LogicANDModule(100, 400);
+	this->view.add_subview(and_module);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	
+	for(int i = 0; i < this->components.size(); i++) {
+		this->components[i]->update();
+	}
 }
 
 //--------------------------------------------------------------

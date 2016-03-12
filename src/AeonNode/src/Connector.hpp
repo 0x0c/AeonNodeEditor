@@ -9,8 +9,11 @@
 #ifndef Connector_hpp
 #define Connector_hpp
 
+#include <functional>
 #include <string>
 #include <tuple>
+#include <boost/any.hpp>
+#include "ofTrueTypeFont.h"
 #include "ofGraphics.h"
 #include "ofxHierarchy.h"
 #include "../lib/thunderclap/thunderclap.h"
@@ -21,8 +24,9 @@ namespace AeonNode {
 	private:
 		bool selected;
 		ofPoint drag_point;
-		std::string name;
-		std::string group;
+		std::string identifier;
+		Node *parent;
+		ofTrueTypeFont label_font;
 		
 		static thunderclap::thunderclap<std::tuple<ofxHierarchy::Point, Connector*>>* shared_observer();
 		void onConnecterPressed(ofMouseEventArgs& mouseArgs);
@@ -36,12 +40,15 @@ namespace AeonNode {
 			Output
 		} Type;
 		Connector::Type type;
-		std::vector<Connector *> connector;
+		std::vector<Connector *> connected_connector;
 		
-		void connect(Connector *connector);
-		void disconnect(Connector *connector);
+		Node* get_parent();
+		virtual void send_data(Node *from, boost::any data);
+		virtual void received_data(Node *from, boost::any data);
+		virtual void connect(Connector *connector);
+		virtual void disconnect(Connector *connector);
 		virtual void draw();
-		Connector(std::string group, Connector::Type type);
+		Connector(Node *parent, Connector::Type type);
 		~Connector();
 	};
 }

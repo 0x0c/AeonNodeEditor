@@ -12,49 +12,34 @@
 #include "Node.hpp"
 
 namespace AeonNode {
+	static float ConnectorMargin = 28;
 	void Node::onMousePressed(ofMouseEventArgs& mouseArgs) {
 		ofPoint p(mouseArgs.x, mouseArgs.y);
 		if (this->hitTest(p.x, p.y)) {
 			this->selected = true;
+			this->clicked_position = {p.x, p.y};
 		}
 	}
 	
 	void Node::onMouseReleased(ofMouseEventArgs& mouseArgs) {
 		this->selected = false;
+		this->original_position = {this->frame.origin.x, this->frame.origin.y};
 	}
 	
 	void Node::onMouseDragged(ofMouseEventArgs& mouseArgs) {
 		if (this->selected) {
 			ofPoint p(mouseArgs.x, mouseArgs.y);
-			this->frame.origin.x = p.x - this->frame.size.height / 2.0;
-			this->frame.origin.y = p.y - this->frame.size.width / 2.0;
-			for (int i = 0; i < this->input_connector.size(); i++) {
-				auto c = this->input_connector[i];
-				c->setCenter(this->frame.origin.x - 10, this->center().y);
-			}
-			for (int i = 0; i < this->output_connector.size(); i++) {
-				auto c = this->output_connector[i];
-				c->setCenter(this->frame.origin.x + this->frame.size.width + 10, this->center().y);
-			}
+			this->frame.origin.x = this->original_position.x - (this->clicked_position.x - p.x);
+			this->frame.origin.y = this->original_position.y - (this->clicked_position.y - p.y);
+			this->size_to_fit();
 		}
 	}
 	
 	Connector* Node::add_connector(Connector::Type type, std::string tag, std::vector<Connector *> *connecter) {
-		Connector *c = new Connector(this->name, type);
+		Connector *c = new Connector(this, type);
 		c->tag = tag;
 		connecter->push_back(c);
 		return c;
-	}
-	
-	void Node::add_connector(std::string tag, Connector::Type type) {
-		std::vector<Connector *> *connector = type == Connector::Type::Output ? &this->output_connector : &this->input_connector;
-		auto c = this->add_connector(type, tag, connector);
-		if (type == Connector::Type::Input) {
-			c->setCenter(this->frame.origin.x - 10, this->center().y);
-		}
-		else {
-			c->setCenter(this->frame.origin.x + this->frame.size.width + 10, this->center().y);
-		}
 	}
 
 	Connector* Node::tag_for_connector(std::vector<Connector *> *connector, std::string tag) {
@@ -75,7 +60,7 @@ namespace AeonNode {
 		return this->tag_for_connector(connector, tag);
 	}
 	
-	Node::Node(ofxHierarchy::Rect f) : View(), selected(false) {
+	Node::Node(ofxHierarchy::Rect f) : View(), selected(false), original_position({f.origin.x, f.origin.y}), clicked_position({0, 0}) {
 		std::string hash;
 		static std::string chars = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789,./;'[]-=<>?:{}|_+";
 		static std::random_device rnd;
@@ -84,7 +69,7 @@ namespace AeonNode {
 		for (int i = 0; i < 32; ++i) {
 			hash += chars[idx(mt)];
 		}
-		this->name = hash;
+		this->identifier = hash;
 		this->frame = f;
 		this->drawable_content = [=](ofxHierarchy::Rect frame) {
 			ofFill();
@@ -104,5 +89,33 @@ namespace AeonNode {
 		ofAddListener(ofEvents().mousePressed, this, &Node::onMousePressed);
 		ofAddListener(ofEvents().mouseReleased, this, &Node::onMouseReleased);
 		ofAddListener(ofEvents().mouseDragged, this, &Node::onMouseDragged);
+	}
+	
+	void Node::add_connector(std::string tag, Connector::Type type) {
+		std::vector<Connector *> *connector = type == Connector::Type::Output ? &this->output_connector : &this->input_connector;
+		auto c = this->add_connector(type, tag, connector);
+		if (type == Connector::Type::Input) {
+			c->setCenter(this->frame.origin.x - 10, this->frame.origin.y + ConnectorMargin);
+		}
+		else {
+			c->setCenter(this->frame.origin.x + this->frame.size.width + 10, this->frame.origin.y + ConnectorMargin);
+		}
+	}
+	
+	void Node::send_data(boost::any data) {
+		for (int i = 0; i < this->output_connector.size(); i++) {
+			this->output_connector[i]->send_data(this, data);
+		}
+	}
+
+	void Node::size_to_fit() {
+		for (int i = 0; i < this->input_connector.size(); i++) {
+			auto c = this->input_connector[i];
+			c->setCenter(this->frame.origin.x - 10, this->frame.origin.y + i * ConnectorMargin + 10);
+		}
+		for (int i = 0; i < this->output_connector.size(); i++) {
+			auto c = this->output_connector[i];
+			c->setCenter(this->frame.origin.x + this->frame.size.width + 10, this->frame.origin.y + i * ConnectorMargin + 10);
+		}
 	}
 }

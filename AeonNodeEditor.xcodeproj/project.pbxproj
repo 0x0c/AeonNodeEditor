@@ -15,6 +15,7 @@
 		E98143FD1C90BB9200A0DB31 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143F81C90BB2C00A0DB31 /* Connector.cpp */; };
 		E98143FE1C90BB9200A0DB31 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143FA1C90BB2C00A0DB31 /* Node.cpp */; };
 		E98143FF1C90BB9700A0DB31 /* thunderclap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98143F21C90BB2C00A0DB31 /* thunderclap.cpp */; };
+		E98144051C90CE6C00A0DB31 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E98144031C90CE6C00A0DB31 /* Module.cpp */; };
 		F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		E98143F91C90BB2C00A0DB31 /* Connector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Connector.hpp; sourceTree = "<group>"; };
 		E98143FA1C90BB2C00A0DB31 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		E98143FB1C90BB2C00A0DB31 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		E98144031C90CE6C00A0DB31 /* Module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Module.cpp; sourceTree = "<group>"; };
+		E98144041C90CE6C00A0DB31 /* Module.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Module.hpp; sourceTree = "<group>"; };
 		F59384ED57A7C6A7A8B0351D /* ofxDatGuiEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiEvents.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiEvents.h; sourceTree = SOURCE_ROOT; };
 		FDA86F4C2F1F1964D35391C6 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiButton.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -199,6 +202,7 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				E98144001C90CE5000A0DB31 /* AeonKitMapper */,
 				E98143E91C90BB2C00A0DB31 /* AeonNode */,
 			);
 			path = src;
@@ -257,6 +261,31 @@
 				E98143FB1C90BB2C00A0DB31 /* Node.hpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		E98144001C90CE5000A0DB31 /* AeonKitMapper */ = {
+			isa = PBXGroup;
+			children = (
+				E98144011C90CE5800A0DB31 /* src */,
+			);
+			path = AeonKitMapper;
+			sourceTree = "<group>";
+		};
+		E98144011C90CE5800A0DB31 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E98144021C90CE5E00A0DB31 /* Module */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E98144021C90CE5E00A0DB31 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E98144031C90CE6C00A0DB31 /* Module.cpp */,
+				E98144041C90CE6C00A0DB31 /* Module.hpp */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		E9B32C117486580389FAFF01 /* src */ = {
@@ -371,6 +400,7 @@
 				E98143FD1C90BB9200A0DB31 /* Connector.cpp in Sources */,
 				E98143FE1C90BB9200A0DB31 /* Node.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E98144051C90CE6C00A0DB31 /* Module.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */,
 				C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */,
