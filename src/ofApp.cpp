@@ -20,7 +20,7 @@ void ofApp::setup(){
 	}
 	
 	folder = this->gui->addFolder("Utility Modules");
-	modules = {"HapticPattern", "Counter", "Value_Int", "Value_Float", "StringConverter_Int", "StringConverter_Float", "StringConverter_Bool"};
+	modules = {"HapticPattern", "Counter", "Value_Int", "StringConverter_Int", "StringConverter_Float", "StringConverter_Bool"};
 	for (int i = 0; i < modules.size(); i++) {
 		auto button = folder->addButton(modules[i]);
 		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
@@ -28,7 +28,7 @@ void ofApp::setup(){
 	}
 	
 	folder = this->gui->addFolder("Condition Modules");
-	modules = {"Condition_Int", "Condition_Float", "Condition_Bool"};
+	modules = {"Condition_Int", "Condition_Bool"};
 	for (int i = 0; i < modules.size(); i++) {
 		auto button = folder->addButton(modules[i]);
 		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);

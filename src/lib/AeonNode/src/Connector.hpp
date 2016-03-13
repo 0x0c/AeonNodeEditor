@@ -27,7 +27,6 @@ namespace AeonNode {
 		ofPoint drag_point;
 		std::string identifier;
 		Node *parent_node;
-		Connector *parent_connector;
 		ofTrueTypeFont label_font;
 		
 		static thunderclap::thunderclap<std::tuple<ofxHierarchy::Point, Connector*>>* shared_observer();
@@ -44,6 +43,7 @@ namespace AeonNode {
 		} Type;
 		Connector::Type type;
 		std::vector<Connector *> connected_connector;
+		Connector *parent_connector;
 		Node* get_parent_node();
 		std::type_info* get_connectable_type();
 		virtual bool is_connectable_type(std::type_info *type);

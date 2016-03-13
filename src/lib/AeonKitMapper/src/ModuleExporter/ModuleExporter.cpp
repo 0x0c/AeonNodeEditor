@@ -6,22 +6,41 @@
 //
 //
 
+#include<iostream>
+#include<fstream>
 #include "ModuleExporter.hpp"
-#include "Node.hpp"
-#include "../Module/Module.cpp"
+#include "AeonKitMapper.hpp"
 #include "ujson.hpp"
 
 namespace AeonKitMapper {
 	void ModuleExporter::export_module_relation(std::vector<AeonNode::Node *> module) {
+		ofstream outputfile(ofToDataPath("graph.amg"));
 		for (int i = 0; i < module.size(); i++) {
-			
-			auto n = module[i];
-			for (int j = 0; j < n->input_connector.size(); j++) {
-				
-			}
-			for (int j = 0; j < n->output_connector.size(); j++) {
-				
+			auto n = dynamic_cast<AeonKitMapper::ModuleCore *>(module[i]);
+			for (auto c : n->output_connector) {
+				for (auto d : c->connected_connector) {
+					auto node = dynamic_cast<AeonKitMapper::ModuleCore *>(d->get_parent_node());
+					outputfile << n->get_module_name() << ":" << n->get_identifier() << ":" << c->tag << " " << node->get_module_name() << ":" << node->get_identifier() << ":" << d->tag;
+					auto value = dynamic_cast<AeonKitMapper::ValueModule<int> *>(n);
+					if (value) {
+						outputfile << " " << value->eval();
+					}
+					auto int_condition = dynamic_cast<AeonKitMapper::ConditionModule<int> *>(n);
+					if (int_condition) {
+						outputfile << " " << int_condition->type;
+					}
+					auto bool_condition = dynamic_cast<AeonKitMapper::ConditionModule<bool> *>(n);
+					if (bool_condition) {
+						outputfile << " " << bool_condition->type;
+					}
+					auto pattern = dynamic_cast<AeonKitMapper::HapticPatternGeneratorModule *>(n);
+					if (bool_condition) {
+						outputfile << " " << pattern->type;
+					}
+					outputfile << std::endl;
+				}
 			}
 		}
+		outputfile.close();
 	}
 }

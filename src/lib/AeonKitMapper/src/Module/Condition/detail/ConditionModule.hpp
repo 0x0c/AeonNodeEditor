@@ -48,13 +48,13 @@ namespace AeonKitMapper {
 		else if (type == Grater) {
 			result = this->in1 > this->in2;
 		}
-		else if (type == GraterThan) {
+		else if (type == GraterEqual) {
 			result = this->in1 >= this->in2;
 		}
 		else if (type == Less) {
 			result = this->in1 < this->in2;
 		}
-		else if (type == LessThan) {
+		else if (type == LessEqual) {
 			result = this->in1 <= this->in2;
 		}
 		

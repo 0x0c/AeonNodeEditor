@@ -35,6 +35,7 @@ namespace AeonNode {
 		std::vector<Connector *> input_connector;
 		std::vector<Connector *> output_connector;
 		
+		std::string get_identifier();
 		Node(ofxHierarchy::Rect f);
 		virtual void connected(Connector *to) {};
 		virtual void add_connector(std::string tag, std::type_info *connectable_type, Connector::Type type);

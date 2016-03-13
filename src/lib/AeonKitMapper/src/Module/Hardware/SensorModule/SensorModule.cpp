@@ -40,18 +40,20 @@ namespace AeonKitMapper {
 	}
 	
 	TouchSensor::TouchSensor(float x, float y) : SensorModule("Touch", x, y), position(0), pressure(0) {
-		this->add_connector("position", (std::type_info *)&typeid(float), AeonNode::Connector::Type::Output);
-		this->add_connector("pressure", (std::type_info *)&typeid(float), AeonNode::Connector::Type::Output);
+		this->add_connector("position", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
+		this->add_connector("pressure", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		auto slider = this->gui->addSlider("position", 0, 255);
 		slider->onSliderEvent(this, &TouchSensor::onSliderEvent);
+		slider->setValue(this->position);
 		slider->bind(this->position, 0, 255);
 		slider = this->gui->addSlider("pressure", 0, 255);
 		slider->onSliderEvent(this, &TouchSensor::onSliderEvent);
+		slider->setValue(this->pressure);
 		slider->bind(this->pressure, 0, 255);
 	}
 	
 	void TouchSensor::onSliderEvent(ofxDatGuiSliderEvent e) {
-		float data = 0;
+		int data = 0;
 		std::string slider_label = e.target->getLabel();
 		std::string label;
 		label.resize(slider_label.size());
@@ -67,7 +69,7 @@ namespace AeonKitMapper {
 		c->send_data(this, data);
 	}
 	
-	float TouchSensor::eval() {
+	int TouchSensor::eval() {
 		return this->get_position();
 	}
 	
@@ -78,22 +80,23 @@ namespace AeonKitMapper {
 		c->send_data(this, this->get_pressure());
 	}
 	
-	float TouchSensor::update_output_state() {
+	int TouchSensor::update_output_state() {
 		return this->eval();
 	}
 	
-	float TouchSensor::get_position() {
+	int TouchSensor::get_position() {
 		return this->position;
 	}
 	
-	float TouchSensor::get_pressure() {
+	int TouchSensor::get_pressure() {
 		return this->pressure;
 	}
 	
 	DepthSensor::DepthSensor(float x, float y) : SensorModule("Depth", x, y), depth(0) {
-		this->add_connector("depth", (std::type_info *)&typeid(float), AeonNode::Connector::Type::Output);
+		this->add_connector("depth", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		ofxDatGuiSlider *depth_slider = this->gui->addSlider("depth", 0, 255);
 		depth_slider->onSliderEvent(this,& DepthSensor::onSliderEvent);
+		depth_slider->setValue(this->depth);
 		depth_slider->bind(this->depth, 0, 255);
 	}
 	
@@ -101,7 +104,7 @@ namespace AeonKitMapper {
 		this->eval_and_send();
 	}
 	
-	float DepthSensor::eval() {
+	int DepthSensor::eval() {
 		return this->get_depth();
 	}
 	
@@ -109,11 +112,11 @@ namespace AeonKitMapper {
 		this->send_data(this->update_output_state());
 	}
 	
-	float DepthSensor::update_output_state() {
+	int DepthSensor::update_output_state() {
 		return this->eval();
 	}
 	
-	float DepthSensor::get_depth() {
+	int DepthSensor::get_depth() {
 		return this->depth;
 	}
 }

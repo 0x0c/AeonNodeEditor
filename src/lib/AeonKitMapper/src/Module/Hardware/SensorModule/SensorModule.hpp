@@ -39,30 +39,30 @@ namespace AeonKitMapper {
 		bool get_tilt_status();
 	};
 	
-	class TouchSensor : public SensorModule<float> {
+	class TouchSensor : public SensorModule<int> {
 	private:
-		float position;
-		float pressure;
+		int position;
+		int pressure;
 		void onSliderEvent(ofxDatGuiSliderEvent e);
 	public:
 		TouchSensor(float x, float y);
-		virtual float eval();
+		virtual int eval();
 		virtual void eval_and_send();
-		virtual float update_output_state();
-		float get_position();
-		float get_pressure();
+		virtual int update_output_state();
+		int get_position();
+		int get_pressure();
 	};
 	
-	class DepthSensor : public SensorModule<float> {
+	class DepthSensor : public SensorModule<int> {
 	private:
-		float depth;
+		int depth;
 		void onSliderEvent(ofxDatGuiSliderEvent e);
 	public:
 		DepthSensor(float x, float y);
-		virtual float eval();
+		virtual int eval();
 		virtual void eval_and_send();
-		virtual float update_output_state();
-		float get_depth();
+		virtual int update_output_state();
+		int get_depth();
 	};
 }
 

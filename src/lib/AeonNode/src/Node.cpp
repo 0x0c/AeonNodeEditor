@@ -60,13 +60,17 @@ namespace AeonNode {
 		return this->tag_for_connector(connector, tag);
 	}
 	
+	std::string Node::get_identifier() {
+		return this->identifier;
+	}
+	
 	Node::Node(ofxHierarchy::Rect f) : View(), selected(false), original_position({f.origin.x, f.origin.y}), clicked_position({0, 0}) {
 		std::string hash;
 		static std::string chars = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789,./;'[]-=<>?:{}|_+";
 		static std::random_device rnd;
 		static std::mt19937 mt(rnd());
 		static std::uniform_int_distribution<> idx(0, 32);
-		for (int i = 0; i < 32; ++i) {
+		for (int i = 0; i < 5; ++i) {
 			hash += chars[idx(mt)];
 		}
 		this->identifier = hash;

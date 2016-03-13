@@ -18,9 +18,9 @@ namespace AeonKitMapper {
 			Equal,
 			NotEqual,
 			Grater,
-			GraterThan,
+			GraterEqual,
 			Less,
-			LessThan,
+			LessEqual,
 		} ComparisonType;
 	private:
 		T in1;
@@ -41,16 +41,16 @@ namespace AeonKitMapper {
 					result = "> : Grater";
 				}
 					break;
-				case GraterThan: {
-					result = ">= : GraterThan";
+				case GraterEqual: {
+					result = ">= : GraterEqual";
 				}
 					break;
 				case Less: {
 					result = "< : Less";
 				}
 					break;
-				case LessThan: {
-					result = "<= : LessThan";
+				case LessEqual: {
+					result = "<= : LessEqual";
 				}
 					break;
 			}

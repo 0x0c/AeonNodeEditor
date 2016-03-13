@@ -9,7 +9,7 @@
 #include "../ValueModule.hpp"
 
 namespace AeonKitMapper {
-	template <typename T> ValueModule<T>::ValueModule(float x, float y) : Module<T>("ValueModule", x, y) {
+	template <typename T> ValueModule<T>::ValueModule(float x, float y) : Module<T>("Value", x, y) {
 		this->add_connector("out", (std::type_info *)&typeid(T), AeonNode::Connector::Type::Output);
 		ofxDatGuiSlider *slider = this->gui->addSlider("value", 0, 255);
 		slider->onSliderEvent(this,& ValueModule::onSliderEvent);

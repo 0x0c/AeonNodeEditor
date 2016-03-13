@@ -13,14 +13,13 @@
 #include <vector>
 #include "ofEventUtils.h"
 #include "ofxDatGui.h"
-#include "../../../AeonNode/src/Node.hpp"
+#include "ModuleCore.hpp"
 #include "thunderclap.h"
 
 namespace AeonKitMapper {
-	template <typename T> class Module : public AeonNode::Node {
+	template <typename T> class Module : public ModuleCore {
 	protected:
 		ofxDatGui *gui;
-		std::string module_name;
 		
 		virtual void onMouseDragged(ofMouseEventArgs& mouseArgs) override;
 	public:
@@ -28,7 +27,6 @@ namespace AeonKitMapper {
 			this->eval_and_send();
 		}
 		virtual void size_to_fit() override;
-		std::string get_module_name();
 		void update(ofEventArgs &args);
 		Module(std::string module_name, float x, float y);
 		~Module();

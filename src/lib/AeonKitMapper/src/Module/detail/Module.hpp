@@ -22,16 +22,11 @@ namespace AeonKitMapper {
 		this->frame.size.height = this->gui->getHeight() - 3;
 	}
 	
-	template <typename T> std::string Module<T>::get_module_name()  {
-		return this->module_name;
-	}
-	
 	template <typename T> void Module<T>::update(ofEventArgs &args) {
 		this->gui->update();
 	}
 	
-	template <typename T> Module<T>::Module(std::string module_name, float x, float y) : AeonNode::Node({x, y, 150, 80}) {
-		this->module_name = module_name;
+	template <typename T> Module<T>::Module(std::string module_name, float x, float y) : ModuleCore(module_name, x, y) {
 		this->did_draw = [=] (ofxHierarchy::Rect frame) {
 			this->gui->draw();
 		};
@@ -51,6 +46,6 @@ namespace AeonKitMapper {
 	
 	template <typename T> void Module<T>::add_connector(std::string tag, std::type_info *connectable_type, AeonNode::Connector::Type type) {
 		this->size_to_fit();
-		Node::add_connector(tag, connectable_type, type);
+		ModuleCore::add_connector(tag, connectable_type, type);
 	}
 }
