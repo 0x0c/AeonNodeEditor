@@ -12,16 +12,15 @@
 #include "../Module.hpp"
 
 namespace AeonKitMapper {
+	typedef enum {
+		Equal,
+		NotEqual,
+		Grater,
+		GraterEqual,
+		Less,
+		LessEqual,
+	} ComparisonType;
 	template <typename T> class ConditionModule : public Module<bool> {
-	public:
-		typedef enum {
-			Equal,
-			NotEqual,
-			Grater,
-			GraterEqual,
-			Less,
-			LessEqual,
-		} ComparisonType;
 	private:
 		T in1;
 		T in2;

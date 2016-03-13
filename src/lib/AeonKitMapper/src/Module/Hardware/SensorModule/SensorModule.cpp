@@ -11,7 +11,7 @@
 #include <string>
 
 namespace AeonKitMapper {
-	TiltSensor::TiltSensor(float x, float y) : SensorModule("Tilt", x, y), tilt(false) {
+	TiltSensor::TiltSensor(float x, float y) : SensorModule("TiltSensor", x, y), tilt(false) {
 		this->add_connector("tilt", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 		auto button = this->gui->addButton("tilt");
 		button->onButtonEvent(this, &TiltSensor::onButtonEvent);
@@ -39,7 +39,7 @@ namespace AeonKitMapper {
 		this->tilt = false;
 	}
 	
-	TouchSensor::TouchSensor(float x, float y) : SensorModule("Touch", x, y), position(0), pressure(0) {
+	TouchSensor::TouchSensor(float x, float y) : SensorModule("TouchSensor", x, y), position(0), pressure(0) {
 		this->add_connector("position", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		this->add_connector("pressure", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		auto slider = this->gui->addSlider("position", 0, 255);
@@ -92,7 +92,7 @@ namespace AeonKitMapper {
 		return this->pressure;
 	}
 	
-	DepthSensor::DepthSensor(float x, float y) : SensorModule("Depth", x, y), depth(0) {
+	DepthSensor::DepthSensor(float x, float y) : SensorModule("DepthSensor", x, y), depth(0) {
 		this->add_connector("depth", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		ofxDatGuiSlider *depth_slider = this->gui->addSlider("depth", 0, 255);
 		depth_slider->onSliderEvent(this,& DepthSensor::onSliderEvent);

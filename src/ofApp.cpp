@@ -50,6 +50,8 @@ void ofApp::setup(){
 		button->onButtonEvent(this, &ofApp::onAddModuleButtonEvent);
 		button->setTheme(new ofxDatGuiThemeAqua());
 	}
+	
+	AeonKitMapper::ModuleImporter::import(&this->view, &this->modules);
 }
 
 //--------------------------------------------------------------

@@ -6,11 +6,10 @@
 //
 //
 
-#include<iostream>
-#include<fstream>
+#include <iostream>
+#include <fstream>
 #include "ModuleExporter.hpp"
 #include "AeonKitMapper.hpp"
-#include "ujson.hpp"
 
 namespace AeonKitMapper {
 	void ModuleExporter::export_module_relation(std::vector<AeonNode::Node *> module) {
@@ -20,22 +19,34 @@ namespace AeonKitMapper {
 			for (auto c : n->output_connector) {
 				for (auto d : c->connected_connector) {
 					auto node = dynamic_cast<AeonKitMapper::ModuleCore *>(d->get_parent_node());
-					outputfile << n->get_module_name() << ":" << n->get_identifier() << ":" << c->tag << " " << node->get_module_name() << ":" << node->get_identifier() << ":" << d->tag;
+					outputfile << n->get_module_name() << ":" << n->get_identifier() << ":" << c->tag;
+
+					auto hardware = dynamic_cast<AeonKitMapper::HardwareModuleCore *>(n);
+					if (hardware) {
+						outputfile << ":" << hardware->get_device_name();
+					}
 					auto value = dynamic_cast<AeonKitMapper::ValueModule<int> *>(n);
 					if (value) {
-						outputfile << " " << value->eval();
+						outputfile << ":" << value->eval();
 					}
 					auto int_condition = dynamic_cast<AeonKitMapper::ConditionModule<int> *>(n);
 					if (int_condition) {
-						outputfile << " " << int_condition->type;
+						outputfile << ":" << int_condition->type;
 					}
 					auto bool_condition = dynamic_cast<AeonKitMapper::ConditionModule<bool> *>(n);
 					if (bool_condition) {
-						outputfile << " " << bool_condition->type;
+						outputfile << ":" << bool_condition->type;
 					}
 					auto pattern = dynamic_cast<AeonKitMapper::HapticPatternGeneratorModule *>(n);
 					if (bool_condition) {
-						outputfile << " " << pattern->type;
+						outputfile << ":" << pattern->type;
+					}
+					
+					outputfile << " " << node->get_module_name() << ":" << node->get_identifier() << ":" << d->tag;
+					
+					hardware = dynamic_cast<AeonKitMapper::HardwareModuleCore *>(node);
+					if (hardware) {
+						outputfile << ":" << hardware->get_device_name();
 					}
 					outputfile << std::endl;
 				}

@@ -12,10 +12,8 @@
 		40575BC42E6DB2A73DBCBD94 /* DisplayModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E01F62249A3650A0C85734 /* DisplayModule.cpp */; };
 		512CABC2429BAEAA018305C3 /* StringConverterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 211CAB43D3E45EC0F935E4A5 /* StringConverterModule.cpp */; };
 		6DC9090E7B430623979A96F3 /* LogicModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53E4CB1A117A5BB6452ED760 /* LogicModule.cpp */; };
-		6FAA22B805199FFFF5D08056 /* ujson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8611993FBB50A307F6FCC97E /* ujson.cpp */; };
 		80E510683E0CA819D6601B12 /* CounterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD1F9A2C7C12136C23E21C1 /* CounterModule.cpp */; };
 		855E56368094E59DF71D4471 /* Connector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C4E0F10252716DACC38929F /* Connector.cpp */; };
-		885FC592853A7A6D0A53BD79 /* double-conversion.cc in Sources */ = {isa = PBXBuildFile; fileRef = 212890F56D21E8CB8EF64A92 /* double-conversion.cc */; };
 		95A8A4726D64C739094E0FCB /* HardwareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E464565E686082F260FB8 /* HardwareModule.cpp */; };
 		9CF4130A7E6DA19A3DC42B9A /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954E0E8B7DB9D6983309883 /* ofxSmartFont.cpp */; };
 		AD2BFDFC32FD89FBD4EC657A /* ConditionModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F51780B867D37078409E89 /* ConditionModule.cpp */; };
@@ -27,8 +25,10 @@
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
 		E94BDC571C9560A900A19658 /* ModuleCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E94BDC551C9560A900A19658 /* ModuleCore.cpp */; };
+		E94BDC601C9570A600A19658 /* ModuleImporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E94BDC5E1C9570A600A19658 /* ModuleImporter.cpp */; };
 		E9AB5A441C94AAC100B4B8EA /* ValueModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9AB5A421C94AAC100B4B8EA /* ValueModule.cpp */; };
 		E9AB5A4A1C94AD9900B4B8EA /* HapticPatternGeneratorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9AB5A481C94AD9900B4B8EA /* HapticPatternGeneratorModule.cpp */; };
+		E9CCC01A1C95907D004E06E8 /* HardwareModuleCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9CCC0181C95907D004E06E8 /* HardwareModuleCore.cpp */; };
 		F22AEE6ED97C684907181FE9 /* ofxHierarchy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF027D62430F87942CC96DFC /* ofxHierarchy.cpp */; };
 		F8AE409FAF15C4964D1A0EB8 /* ModuleExporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8D60D2652E2D29F322390E2 /* ModuleExporter.cpp */; };
 /* End PBXBuildFile section */
@@ -72,11 +72,9 @@
 		1A3E3B8F332A1A3C7EDF4998 /* ofxDatGuiComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGuiComponent.cpp; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiComponent.cpp; sourceTree = SOURCE_ROOT; };
 		1C4E0F10252716DACC38929F /* Connector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Connector.cpp; path = src/lib/AeonNode/src/Connector.cpp; sourceTree = SOURCE_ROOT; };
 		211CAB43D3E45EC0F935E4A5 /* StringConverterModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StringConverterModule.cpp; path = src/lib/AeonKitMapper/src/Module/Utility/StringConverterModule/StringConverterModule.cpp; sourceTree = SOURCE_ROOT; };
-		212890F56D21E8CB8EF64A92 /* double-conversion.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = "double-conversion.cc"; path = "src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion.cc"; sourceTree = SOURCE_ROOT; };
 		21E1E3071CB7B11914428B62 /* ofxDatGuiThemes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiThemes.h; path = ../../../addons/ofxDatGui/src/themes/ofxDatGuiThemes.h; sourceTree = SOURCE_ROOT; };
 		25B37904B5001247EDF633BA /* Node.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Node.cpp; path = src/lib/AeonNode/src/Node.cpp; sourceTree = SOURCE_ROOT; };
 		26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGui.cpp; path = ../../../addons/ofxDatGui/src/ofxDatGui.cpp; sourceTree = SOURCE_ROOT; };
-		38BF33C6C685D902486A9104 /* ujson.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ujson.hpp; path = src/lib/AeonKitMapper/lib/ujson/ujson/ujson.hpp; sourceTree = SOURCE_ROOT; };
 		422C4E1AAC7EC4D30B17702D /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiIntObject.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
 		45A4C05324ACB2AE7FE9904A /* Connector.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Connector.hpp; path = src/lib/AeonNode/src/Connector.hpp; sourceTree = SOURCE_ROOT; };
 		49B40392829587FFC75BA016 /* ModuleExporter.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ModuleExporter.hpp; path = src/lib/AeonKitMapper/src/ModuleExporter/ModuleExporter.hpp; sourceTree = SOURCE_ROOT; };
@@ -90,7 +88,6 @@
 		744031A3E8F8DAF9FE6F3EA8 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiGroups.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
 		787315438BF1DD00C81DF413 /* ofxDatGuiLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiLabel.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiLabel.h; sourceTree = SOURCE_ROOT; };
 		81B15ECE2AFE7709C43B78F7 /* LogicModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LogicModule.hpp; path = src/lib/AeonKitMapper/src/Module/Logic/LogicModule.hpp; sourceTree = SOURCE_ROOT; };
-		8611993FBB50A307F6FCC97E /* ujson.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ujson.cpp; path = src/lib/AeonKitMapper/lib/ujson/ujson/ujson.cpp; sourceTree = SOURCE_ROOT; };
 		896211FFD7650884437CE42C /* ofxSmartFont.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSmartFont.h; path = ../../../addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h; sourceTree = SOURCE_ROOT; };
 		8C7E464565E686082F260FB8 /* HardwareModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = HardwareModule.cpp; path = src/lib/AeonKitMapper/src/Module/Hardware/HardwareModule.cpp; sourceTree = SOURCE_ROOT; };
 		8EA7BC601AB3E11B67FC302B /* Node.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Node.hpp; path = src/lib/AeonNode/src/Node.hpp; sourceTree = SOURCE_ROOT; };
@@ -99,7 +96,6 @@
 		9705D66270ED89ECA6E6FECE /* ofxDatGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGui.h; path = ../../../addons/ofxDatGui/src/ofxDatGui.h; sourceTree = SOURCE_ROOT; };
 		9B5051062C6A871714E6F5F4 /* ofxDatGuiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiConstants.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiConstants.h; sourceTree = SOURCE_ROOT; };
 		9C3C1C6B6C61C7189AA1A909 /* CounterModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CounterModule.hpp; path = src/lib/AeonKitMapper/src/Module/Utility/CounterModule/CounterModule.hpp; sourceTree = SOURCE_ROOT; };
-		9FE55241CD8D7CE0F5F65A0E /* double-conversion.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "double-conversion.h"; path = "src/lib/AeonKitMapper/lib/ujson/ujson/double-conversion.h"; sourceTree = SOURCE_ROOT; };
 		A07AFDA743CC96DA03E26F6F /* thunderclap.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = thunderclap.cpp; path = src/lib/AeonNode/lib/thunderclap/thunderclap.cpp; sourceTree = SOURCE_ROOT; };
 		B498F0559F473CF855EF6062 /* ofxDatGuiTheme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiTheme.h; path = ../../../addons/ofxDatGui/src/themes/ofxDatGuiTheme.h; sourceTree = SOURCE_ROOT; };
 		B7D8BEAA531A329847B85672 /* Module.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Module.cpp; path = src/lib/AeonKitMapper/src/Module/Module.cpp; sourceTree = SOURCE_ROOT; };
@@ -127,12 +123,15 @@
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E94BDC551C9560A900A19658 /* ModuleCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModuleCore.cpp; path = lib/AeonKitMapper/src/Module/ModuleCore.cpp; sourceTree = "<group>"; };
 		E94BDC561C9560A900A19658 /* ModuleCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModuleCore.hpp; path = lib/AeonKitMapper/src/Module/ModuleCore.hpp; sourceTree = "<group>"; };
-		E9AB5A3E1C948D1100B4B8EA /* ujson.re2c */ = {isa = PBXFileReference; lastKnownFileType = text; name = ujson.re2c; path = lib/AeonKitMapper/lib/ujson/ujson/ujson.re2c; sourceTree = "<group>"; };
+		E94BDC5E1C9570A600A19658 /* ModuleImporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModuleImporter.cpp; sourceTree = "<group>"; };
+		E94BDC5F1C9570A600A19658 /* ModuleImporter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModuleImporter.hpp; sourceTree = "<group>"; };
 		E9AB5A421C94AAC100B4B8EA /* ValueModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ValueModule.cpp; sourceTree = "<group>"; };
 		E9AB5A431C94AAC100B4B8EA /* ValueModule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ValueModule.hpp; sourceTree = "<group>"; };
 		E9AB5A461C94AC5C00B4B8EA /* ValueModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ValueModule.hpp; sourceTree = "<group>"; };
 		E9AB5A481C94AD9900B4B8EA /* HapticPatternGeneratorModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HapticPatternGeneratorModule.cpp; sourceTree = "<group>"; };
 		E9AB5A491C94AD9900B4B8EA /* HapticPatternGeneratorModule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HapticPatternGeneratorModule.hpp; sourceTree = "<group>"; };
+		E9CCC0181C95907D004E06E8 /* HardwareModuleCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HardwareModuleCore.cpp; path = lib/AeonKitMapper/src/Module/Hardware/HardwareModuleCore.cpp; sourceTree = "<group>"; };
+		E9CCC0191C95907D004E06E8 /* HardwareModuleCore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HardwareModuleCore.hpp; path = lib/AeonKitMapper/src/Module/Hardware/HardwareModuleCore.hpp; sourceTree = "<group>"; };
 		ED6DC4D524FBCD5B356FD28E /* SensorModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SensorModule.hpp; path = src/lib/AeonKitMapper/src/Module/Hardware/SensorModule/SensorModule.hpp; sourceTree = SOURCE_ROOT; };
 		F2FC15FF181F45C1E43F3100 /* DisplayModule.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DisplayModule.hpp; path = src/lib/AeonKitMapper/src/Module/Hardware/DisplayModule/DisplayModule.hpp; sourceTree = SOURCE_ROOT; };
 		F59384ED57A7C6A7A8B0351D /* ofxDatGuiEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiEvents.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiEvents.h; sourceTree = SOURCE_ROOT; };
@@ -155,7 +154,6 @@
 		086AEC516EA9E79A639D71E6 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				8C98F38ED1714F86E844F6C7 /* ujson */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -163,6 +161,8 @@
 		0C0D632E522C1189318A972A /* Hardware */ = {
 			isa = PBXGroup;
 			children = (
+				E9CCC0181C95907D004E06E8 /* HardwareModuleCore.cpp */,
+				E9CCC0191C95907D004E06E8 /* HardwareModuleCore.hpp */,
 				8C7E464565E686082F260FB8 /* HardwareModule.cpp */,
 				D4621EA7B4F163D9E7F4033A /* HardwareModule.hpp */,
 				BEEAAB4048F60DE071D6E1C1 /* SensorModule */,
@@ -323,18 +323,6 @@
 			name = AeonKitMapper;
 			sourceTree = "<group>";
 		};
-		8C98F38ED1714F86E844F6C7 /* ujson */ = {
-			isa = PBXGroup;
-			children = (
-				212890F56D21E8CB8EF64A92 /* double-conversion.cc */,
-				9FE55241CD8D7CE0F5F65A0E /* double-conversion.h */,
-				8611993FBB50A307F6FCC97E /* ujson.cpp */,
-				38BF33C6C685D902486A9104 /* ujson.hpp */,
-				E9AB5A3E1C948D1100B4B8EA /* ujson.re2c */,
-			);
-			name = ujson;
-			sourceTree = "<group>";
-		};
 		911FE1C75E520EE70A7B4830 /* themes */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,8 +336,9 @@
 			isa = PBXGroup;
 			children = (
 				F67065828C04E93F7E52FBE3 /* AeonKitMapper.hpp */,
-				29D38AEBCD5EB6CB70952E0E /* Module */,
 				8393D57D0DC6B215DF168629 /* ModuleExporter */,
+				E94BDC5D1C95709B00A19658 /* ModuleImporter */,
+				29D38AEBCD5EB6CB70952E0E /* Module */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -492,6 +481,16 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		E94BDC5D1C95709B00A19658 /* ModuleImporter */ = {
+			isa = PBXGroup;
+			children = (
+				E94BDC5E1C9570A600A19658 /* ModuleImporter.cpp */,
+				E94BDC5F1C9570A600A19658 /* ModuleImporter.hpp */,
+			);
+			name = ModuleImporter;
+			path = lib/AeonKitMapper/src/ModuleImporter;
 			sourceTree = "<group>";
 		};
 		E9AB5A411C94AABA00B4B8EA /* ValueModule */ = {
@@ -642,10 +641,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CCC01A1C95907D004E06E8 /* HardwareModuleCore.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E94BDC601C9570A600A19658 /* ModuleImporter.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				885FC592853A7A6D0A53BD79 /* double-conversion.cc in Sources */,
-				6FAA22B805199FFFF5D08056 /* ujson.cpp in Sources */,
 				AD2BFDFC32FD89FBD4EC657A /* ConditionModule.cpp in Sources */,
 				40575BC42E6DB2A73DBCBD94 /* DisplayModule.cpp in Sources */,
 				95A8A4726D64C739094E0FCB /* HardwareModule.cpp in Sources */,

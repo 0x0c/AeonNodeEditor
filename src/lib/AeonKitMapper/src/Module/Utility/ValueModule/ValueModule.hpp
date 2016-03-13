@@ -18,6 +18,9 @@ namespace AeonKitMapper {
 		void onSliderEvent(ofxDatGuiSliderEvent e);
 	public:
 		ValueModule(float x, float y);
+		virtual void set_value(T value) {
+			this->value = value;
+		};
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) override {};
 		virtual T eval() override;
 		virtual void eval_and_send() override;
