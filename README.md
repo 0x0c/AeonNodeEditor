@@ -1,6 +1,6 @@
 # AeonNodeEditor
 
-![](https://raw.githubusercontent.com/0x0c/AeonNodeEditor/master/image/img1.png)
+![](https://raw.githubusercontent.com/0x0c/AeonNodeEditor/master/image/img.png)
 
 ## Dependencies
 - openFrameworks 0.9.0
