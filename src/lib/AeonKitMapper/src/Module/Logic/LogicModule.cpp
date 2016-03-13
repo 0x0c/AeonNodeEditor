@@ -58,7 +58,7 @@ namespace AeonKitMapper {
 	LogicANDModule::LogicANDModule(float x, float y) : LogicModule("AND", x, y) {
 		this->add_connector("in1", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 		this->add_connector("in2", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 		this->clear_input_state();
 	}
 	
@@ -76,7 +76,7 @@ namespace AeonKitMapper {
 	LogicORModule::LogicORModule(float x, float y) : LogicModule("OR", x, y) {
 		this->add_connector("in1", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 		this->add_connector("in2", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 	}
 	
 	bool LogicORModule::eval() {
@@ -93,7 +93,7 @@ namespace AeonKitMapper {
 	LogicXORModule::LogicXORModule(float x, float y) : LogicModule("XOR", x, y) {
 		this->add_connector("in1", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
 		this->add_connector("in2", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 	}
 	
 	bool LogicXORModule::eval() {
@@ -108,8 +108,8 @@ namespace AeonKitMapper {
 	}
 	
 	LogicNOTModule::LogicNOTModule(float x, float y) : LogicModule("NOT", x, y) {
-		this->add_connector("in", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("input", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 	}
 	
 	bool LogicNOTModule::eval() {
@@ -124,7 +124,7 @@ namespace AeonKitMapper {
 	}
 	
 	LogicBooleanModule::LogicBooleanModule(float x, float y) : LogicModule("BOOL", x, y) {
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 		auto button = this->gui->addButton("Eval");
 		button->onButtonEvent(this, &LogicBooleanModule::onButtonEvent);
 	}

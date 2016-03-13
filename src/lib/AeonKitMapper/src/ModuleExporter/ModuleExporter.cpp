@@ -48,6 +48,22 @@ namespace AeonKitMapper {
 					if (hardware) {
 						outputfile << ":" << hardware->get_device_name();
 					}
+					value = dynamic_cast<AeonKitMapper::ValueModule<int> *>(node);
+					if (value) {
+						outputfile << ":" << value->eval();
+					}
+					int_condition = dynamic_cast<AeonKitMapper::ConditionModule<int> *>(node);
+					if (int_condition) {
+						outputfile << ":" << int_condition->type;
+					}
+					bool_condition = dynamic_cast<AeonKitMapper::ConditionModule<bool> *>(node);
+					if (bool_condition) {
+						outputfile << ":" << bool_condition->type;
+					}
+					pattern = dynamic_cast<AeonKitMapper::HapticPatternGeneratorModule *>(node);
+					if (bool_condition) {
+						outputfile << ":" << pattern->type;
+					}
 					outputfile << std::endl;
 				}
 			}

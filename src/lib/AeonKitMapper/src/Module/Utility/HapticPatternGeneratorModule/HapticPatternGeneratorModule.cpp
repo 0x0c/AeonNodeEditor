@@ -10,8 +10,8 @@
 
 namespace AeonKitMapper {
 	HapticPatternGeneratorModule::HapticPatternGeneratorModule(float x, float y) : Module("HapticPatternGenerator", x, y) , type(HapticDisplay::HapticPattern::SingleTap) {
-		this->add_connector("in", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
+		this->add_connector("input", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
+		this->add_connector("pattern", (std::type_info *)&typeid(int), AeonNode::Connector::Type::Output);
 		this->pattern_button = this->gui->addButton(HapticPatternGeneratorModule::pattern_text(this->type));
 		this->pattern_button->onButtonEvent(this, &HapticPatternGeneratorModule::onButtonEvent);
 	}

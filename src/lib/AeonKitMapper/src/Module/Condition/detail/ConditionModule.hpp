@@ -18,7 +18,7 @@ namespace AeonKitMapper {
 	template <typename T> ConditionModule<T>::ConditionModule(float x, float y) : Module("Condition", x, y), type(Equal) {
 		this->add_connector("in1", (std::type_info *)&typeid(T), AeonNode::Connector::Type::Input);
 		this->add_connector("in2", (std::type_info *)&typeid(T), AeonNode::Connector::Type::Input);
-		this->add_connector("out", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
+		this->add_connector("output", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Output);
 		this->comparison_type_button = this->gui->addButton(this->comparison_type_text(this->type));
 		this->comparison_type_button->onButtonEvent(this, &ConditionModule::onButtonEvent);
 	}
