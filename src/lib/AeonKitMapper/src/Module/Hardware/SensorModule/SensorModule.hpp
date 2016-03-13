@@ -14,9 +14,7 @@
 namespace AeonKitMapper {
 	template <typename T> class SensorModule : public HardwareModule<T> {
 	public:
-		SensorModule(std::string module_name, float x, float y) : HardwareModule<T>(module_name, x, y) {
-			this->add_connector("check", (std::type_info *)&typeid(bool), AeonNode::Connector::Type::Input);
-		}
+		SensorModule(std::string module_name, float x, float y) : HardwareModule<T>(module_name, x, y) {}
 		
 		virtual void received_data(AeonNode::Node *from, AeonNode::Connector *connector, boost::any data) {
 			bool in = boost::any_cast<bool>(data);

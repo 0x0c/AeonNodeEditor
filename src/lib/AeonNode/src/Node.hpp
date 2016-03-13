@@ -24,8 +24,6 @@ namespace AeonNode {
 		ofxHierarchy::Point clicked_position;
 		bool selected;
 		std::string identifier;
-		std::vector<Connector *> input_connector;
-		std::vector<Connector *> output_connector;
 		
 		Connector* tag_for_connector(std::vector<Connector *> *connector, std::string tag);
 		Connector* add_connector(Connector::Type type, std::type_info *connectable_type, std::string tag, std::vector<Connector *> *connecter);
@@ -34,6 +32,9 @@ namespace AeonNode {
 		virtual void onMouseReleased(ofMouseEventArgs& mouseArgs);
 		virtual void onMouseDragged(ofMouseEventArgs& mouseArgs);
 	public:
+		std::vector<Connector *> input_connector;
+		std::vector<Connector *> output_connector;
+		
 		Node(ofxHierarchy::Rect f);
 		virtual void connected(Connector *to) {};
 		virtual void add_connector(std::string tag, std::type_info *connectable_type, Connector::Type type);
