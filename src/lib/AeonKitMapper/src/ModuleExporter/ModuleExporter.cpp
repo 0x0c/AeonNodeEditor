@@ -23,7 +23,11 @@ namespace AeonKitMapper {
 
 					auto hardware = dynamic_cast<AeonKitMapper::HardwareModuleCore *>(n);
 					if (hardware) {
-						outputfile << ":" << hardware->get_device_name();
+						std::string device_name = hardware->get_device_name();
+						std::string lower_device_name;
+						lower_device_name.resize(device_name.size());
+						std::transform(device_name.begin(), device_name.end(), lower_device_name.begin(), static_cast<int (*)(int)>(std::tolower));
+						outputfile << ":" << lower_device_name;
 					}
 					auto value = dynamic_cast<AeonKitMapper::ValueModule<int> *>(n);
 					if (value) {
@@ -38,7 +42,7 @@ namespace AeonKitMapper {
 						outputfile << ":" << bool_condition->type;
 					}
 					auto pattern = dynamic_cast<AeonKitMapper::HapticPatternGeneratorModule *>(n);
-					if (bool_condition) {
+					if (pattern) {
 						outputfile << ":" << pattern->type;
 					}
 					
@@ -46,7 +50,11 @@ namespace AeonKitMapper {
 					
 					hardware = dynamic_cast<AeonKitMapper::HardwareModuleCore *>(node);
 					if (hardware) {
-						outputfile << ":" << hardware->get_device_name();
+						std::string device_name = hardware->get_device_name();
+						std::string lower_device_name;
+						lower_device_name.resize(device_name.size());
+						std::transform(device_name.begin(), device_name.end(), lower_device_name.begin(), static_cast<int (*)(int)>(std::tolower));
+						outputfile << ":" << lower_device_name;
 					}
 					value = dynamic_cast<AeonKitMapper::ValueModule<int> *>(node);
 					if (value) {
@@ -61,7 +69,7 @@ namespace AeonKitMapper {
 						outputfile << ":" << bool_condition->type;
 					}
 					pattern = dynamic_cast<AeonKitMapper::HapticPatternGeneratorModule *>(node);
-					if (bool_condition) {
+					if (pattern) {
 						outputfile << ":" << pattern->type;
 					}
 					outputfile << std::endl;

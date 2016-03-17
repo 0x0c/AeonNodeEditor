@@ -6,17 +6,19 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "2584CBCDB6905860AE3F296114B31C017465CDE7" : 0,
     "C7C5A3CE5C73F041BA0CBD132A893B066F4AFF47" : 0,
-    "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : 0,
+    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : 0,
     "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : 0,
-    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : 0
+    "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : 0,
+    "3CFE6DC03B5AE030C2644D46CE50EADFB15BD3A9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F6DAAEF8-4F79-4E7B-A55C-A1B9E2DF5176",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "2584CBCDB6905860AE3F296114B31C017465CDE7" : "..\/..\/addons\/ofxSmartFont",
     "C7C5A3CE5C73F041BA0CBD132A893B066F4AFF47" : "AeonNodeEditor\/src\/lib\/AeonKitMapper\/lib\/ujson\/",
-    "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : "..\/..\/addons\/ofxDatGui",
+    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : "AeonNodeEditor\/src\/lib\/AeonNode\/lib\/thunderclap\/",
     "1F8DF012624E4FABF4C199F7A8065C5712B848A8" : "AeonNodeEditor\/",
-    "19C023D4013624E78B3CDBBC4DEB15EE516311BF" : "AeonNodeEditor\/src\/lib\/AeonNode\/lib\/thunderclap\/"
+    "9233F0F4A2BE011BD468E5177A5AD6623263B23D" : "..\/..\/addons\/ofxDatGui",
+    "3CFE6DC03B5AE030C2644D46CE50EADFB15BD3A9" : "..\/..\/addons\/ofxHierarchy"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "AeonNodeEditor",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -36,6 +38,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:braitsch\/ofxSmartFont.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2584CBCDB6905860AE3F296114B31C017465CDE7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:0x0c\/ofxHierarchy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CFE6DC03B5AE030C2644D46CE50EADFB15BD3A9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:braitsch\/ofxDatGui.git",

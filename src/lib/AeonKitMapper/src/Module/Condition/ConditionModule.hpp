@@ -15,8 +15,8 @@ namespace AeonKitMapper {
 	typedef enum {
 		Equal,
 		NotEqual,
-		Grater,
-		GraterEqual,
+		Greater,
+		GreaterEqual,
 		Less,
 		LessEqual,
 	} ComparisonType;
@@ -36,12 +36,12 @@ namespace AeonKitMapper {
 					result = "!= : NotEqual";
 				}
 					break;
-				case Grater: {
-					result = "> : Grater";
+				case Greater: {
+					result = "> : Greater";
 				}
 					break;
-				case GraterEqual: {
-					result = ">= : GraterEqual";
+				case GreaterEqual: {
+					result = ">= : GreaterEqual";
 				}
 					break;
 				case Less: {
